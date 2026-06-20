@@ -61,18 +61,20 @@ _data = {
 &"RESET": SubResource("Animation_05w1x")
 }
 
-[node name="Player" type="CharacterBody2D" unique_id=463079188]
+[node name="Jogador" type="CharacterBody2D" unique_id=1414349258]
+motion_mode = 1
 script = ExtResource("1_qmp4t")
-Speed = 5.0
+Speed = 100.0
+SpeedFallofRate = 2.5
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2012428963]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1137083364]
 texture_filter = 1
 texture = SubResource("AtlasTexture_jd1co")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1936362687]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1154409523]
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_ep440")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1289476220]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1972665034]
 libraries/ = SubResource("AnimationLibrary_vk3iq")
 autoplay = &"Idle"

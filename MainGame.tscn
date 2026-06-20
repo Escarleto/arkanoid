@@ -1,11 +1,12 @@
-[gd_scene format=3 uid="uid://dblhmlv71k4rj"]
+[gd_scene format=3 uid="uid://cvd0spnlvqsbc"]
 
-[ext_resource type="PackedScene" uid="uid://bpiar38hmbp22" path="res://Scenes/HUD.tscn" id="1_e3m3f"]
-[ext_resource type="Script" path="res://Scenes/MainGame.cs" id="1_yprpe"]
-[ext_resource type="PackedScene" uid="uid://i0imvylwmlcy" path="res://Scenes/Jogador.tscn" id="2_ws5ob"]
+[ext_resource type="Script" uid="uid://bti0lka3ijorp" path="res://scripts/MainGame.cs" id="1_bqqt8"]
+[ext_resource type="PackedScene" path="res://HUD.tscn" id="1_e3m3f"]
+[ext_resource type="PackedScene" path="res://Jogador.tscn" id="2_ws5ob"]
+[ext_resource type="PackedScene" uid="uid://bnvqlviprpf7u" path="res://Scenes/Bola.tscn" id="4_8qpgq"]
 
 [node name="MainGame" type="Node2D" unique_id=1778983138]
-script = ExtResource("1_yprpe")
+script = ExtResource("1_bqqt8")
 
 [node name="Boundries" type="StaticBody2D" parent="." unique_id=1075662199]
 position = Vector2(112, 128)
@@ -21,8 +22,8 @@ motion_mode = 0
 Speed = 5.0
 SpeedFallofRate = 1.0
 
-[node name="Bola" parent="." unique_id=76314033 instance=ExtResource("2_bqqt8")]
-position = Vector2(112, 184)
+[node name="Bola" parent="." unique_id=76314033 instance=ExtResource("4_8qpgq")]
+position = Vector2(112, 200)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1681976700]
 offset = Vector2(112, 128)

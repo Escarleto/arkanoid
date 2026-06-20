@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bnvqlviprpf7u"]
+
+[ext_resource type="Texture2D" uid="uid://c6drl2r0gfdhx" path="res://Assets/Arcade - Arkanoid - Playable Characters - Vaus.png" id="1_l2odm"]
+[ext_resource type="Script" uid="uid://bpvvhk78e36ni" path="res://scripts/Bola.cs" id="1_myq1w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ep440"]
+atlas = ExtResource("1_l2odm")
+region = Rect2(0, 40, 5, 4)
+
+[sub_resource type="Animation" id="Animation_l2odm"]
+resource_name = "Idle"
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture:region")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.47742897),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Rect2(0, 40, 5, 4), Rect2(4, 44, 5, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_myq1w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 40, 5, 4)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mo1gl"]
+_data = {
+&"Idle": SubResource("Animation_l2odm"),
+&"RESET": SubResource("Animation_myq1w")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ep440"]
+radius = 3.0
+
+[node name="Bola" type="CharacterBody2D" unique_id=76314033]
+script = ExtResource("1_myq1w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1031120562]
+texture_filter = 1
+texture = SubResource("AtlasTexture_ep440")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1264555427]
+libraries/ = SubResource("AnimationLibrary_mo1gl")
+autoplay = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1926180961]
+shape = SubResource("CircleShape2D_ep440")
