@@ -6,9 +6,11 @@ public partial class Bloco : StaticBody2D
 {
     [Export] public Texture2D[] StateTextures; // indexed to match enum order
     [Export] public ColorAtlas CurrentState = ColorAtlas.White;
+    private Area2D _detectionArea;
 
+    public CollisionShape2D Collision;
     private TextureRect _textureRect;
-
+    private Bola _bola;
     public override void _Ready()
     {
         _textureRect = GetNode<TextureRect>("TextureRect");
@@ -20,8 +22,15 @@ public partial class Bloco : StaticBody2D
         _textureRect.Texture = StateTextures[(int)CurrentState];
     }
 
-    public override void _Process(double delta)
+    private void OnBodyEntered(Node2D body)
     {
-        base._Process(delta);
+        if (body is Bola bola)
+        {
+            DestroyBlock();
+        }
+    }
+    private void DestroyBlock()
+    {
+        QueueFree();
     }
 }

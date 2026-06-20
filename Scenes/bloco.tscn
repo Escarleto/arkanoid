@@ -49,6 +49,13 @@ offset_bottom = 8.0
 texture = SubResource("AtlasTexture_ciykk")
 stretch_mode = 2
 
+[node name="Area2D" type="Area2D" parent="." unique_id=793100705]
+position = Vector2(-8, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1337340716]
+position = Vector2(16, 8)
+shape = SubResource("RectangleShape2D_ciykk")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1631652818]
 position = Vector2(8, 4)
 shape = SubResource("RectangleShape2D_ciykk")
