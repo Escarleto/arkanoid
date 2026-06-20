@@ -32,7 +32,7 @@ public partial class Bola : CharacterBody2D
                 if (Collision.GetCollider() is Bloco)
                 {
                     Bloco BlocoAcertado = Collision.GetCollider() as Bloco;
-                    BlocoAcertado.QueueFree();
+                    BlocoAcertado.Health--;
                 }
             }
                          

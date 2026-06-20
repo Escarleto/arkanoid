@@ -11,6 +11,17 @@ public partial class Bloco : StaticBody2D
     public CollisionShape2D Collision;
     private TextureRect _textureRect;
     private Bola _bola;
+
+    [Export] private int CurrentHealth = 1;
+    public int Health
+    {
+        get => CurrentHealth;
+        set
+        {
+            CurrentHealth = value;
+            if (value == 0) QueueFree();
+        }
+    }
     public override void _Ready()
     {
         _textureRect = GetNode<TextureRect>("TextureRect");
