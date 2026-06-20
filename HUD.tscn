@@ -3,13 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://b1rkpc4tunc7c" path="res://Assets/Arcade - Arkanoid - Backgrounds - Fields.png" id="1_efote"]
 [ext_resource type="FontFile" uid="uid://dodooal0wom2o" path="res://Fonts/webpixel bitmap_regular.otf" id="1_k5de2"]
 [ext_resource type="Script" uid="uid://df1pyrh2oblj3" path="res://Hud.cs" id="1_vow1y"]
+[ext_resource type="FontFile" uid="uid://ft5dwq6uta2a" path="res://Fonts/webpixel bitmap_medium.otf" id="3_ne771"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ciykk"]
 atlas = ExtResource("1_efote")
 region = Rect2(-1, 0, 226, 240)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ciykk"]
-font = ExtResource("1_k5de2")
+font = ExtResource("3_ne771")
 font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_6ungf"]
@@ -20,6 +21,7 @@ font_size = 20
 script = ExtResource("1_vow1y")
 score = NodePath("Header - HighScore/Score")
 life = NodePath("Header - Lifes/life")
+metadata/_edit_horizontal_guides_ = [-8.0, 13.0]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1079609939]
 offset_right = 224.0
@@ -55,17 +57,23 @@ label_settings = SubResource("LabelSettings_6ungf")
 vertical_alignment = 1
 
 [node name="Header - Lifes" type="Label" parent="." unique_id=448399583]
-offset_left = 16.0
-offset_right = 56.0
+offset_left = 8.0
+offset_right = 48.0
 offset_bottom = 23.0
 text = "1UP"
 label_settings = SubResource("LabelSettings_ciykk")
+horizontal_alignment = 1
 
 [node name="life" type="Label" parent="Header - Lifes" unique_id=202768070]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 48.0
-offset_bottom = 43.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -12.0
+offset_top = 7.0
+offset_right = 28.0
+offset_bottom = 42.0
+grow_horizontal = 2
 text = "00"
 label_settings = SubResource("LabelSettings_6ungf")
+horizontal_alignment = 1
