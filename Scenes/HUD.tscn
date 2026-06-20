@@ -1,24 +1,24 @@
 [gd_scene format=3 uid="uid://bpiar38hmbp22"]
 
-[ext_resource type="Texture2D" uid="uid://b1rkpc4tunc7c" path="res://Assets/Arcade - Arkanoid - Backgrounds - Fields.png" id="1_efote"]
-[ext_resource type="FontFile" uid="uid://dodooal0wom2o" path="res://Fonts/webpixel bitmap_regular.otf" id="1_k5de2"]
-[ext_resource type="Script" uid="uid://df1pyrh2oblj3" path="res://Hud.cs" id="1_vow1y"]
-[ext_resource type="FontFile" uid="uid://ft5dwq6uta2a" path="res://Fonts/webpixel bitmap_medium.otf" id="3_ne771"]
+[ext_resource type="Script" uid="uid://df1pyrh2oblj3" path="res://scripts/Hud.cs" id="1_s3jbq"]
+[ext_resource type="Texture2D" uid="uid://b1rkpc4tunc7c" path="res://Assets/Arcade - Arkanoid - Backgrounds - Fields.png" id="2_c3eba"]
+[ext_resource type="FontFile" uid="uid://ft5dwq6uta2a" path="res://Fonts/webpixel bitmap_medium.otf" id="3_g8s2e"]
+[ext_resource type="FontFile" uid="uid://dodooal0wom2o" path="res://Fonts/webpixel bitmap_regular.otf" id="4_t385i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ciykk"]
-atlas = ExtResource("1_efote")
+atlas = ExtResource("2_c3eba")
 region = Rect2(-1, 0, 226, 240)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ciykk"]
-font = ExtResource("3_ne771")
+font = ExtResource("3_g8s2e")
 font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_6ungf"]
-font = ExtResource("1_k5de2")
+font = ExtResource("4_t385i")
 font_size = 20
 
 [node name="HUD" type="Node2D" unique_id=273616356 node_paths=PackedStringArray("score", "life")]
-script = ExtResource("1_vow1y")
+script = ExtResource("1_s3jbq")
 score = NodePath("Header - HighScore/Score")
 life = NodePath("Header - Lifes/life")
 metadata/_edit_horizontal_guides_ = [-8.0, 13.0]
