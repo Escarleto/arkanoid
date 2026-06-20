@@ -29,6 +29,7 @@ offset_bottom = 256.0
 color = Color(0, 0, 0, 1)
 
 [node name="ArcadeArkanoidBackgroundsFields" type="Sprite2D" parent="." unique_id=1910102623]
+texture_filter = 1
 position = Vector2(112, 152)
 texture = SubResource("AtlasTexture_ciykk")
 

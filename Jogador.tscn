@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://i0imvylwmlcy"]
+
+[ext_resource type="Script" uid="uid://bqbgv5ckp2qma" path="res://scripts/Jogador.cs" id="1_qmp4t"]
+[ext_resource type="Texture2D" uid="uid://c6drl2r0gfdhx" path="res://Assets/Arcade - Arkanoid - Playable Characters - Vaus.png" id="2_x77am"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jd1co"]
+atlas = ExtResource("2_x77am")
+region = Rect2(32, 8, 32, 8)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ep440"]
+radius = 4.0
+height = 32.0
+
+[sub_resource type="Animation" id="Animation_x77am"]
+resource_name = "Idle"
+length = 1.5666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture:region")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.76666665, 1.1666666, 1.5666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(32, 0, 32, 8), Rect2(32, 8, 32, 8), Rect2(32, 16, 32, 8), Rect2(32, 24, 32, 8), Rect2(32, 32, 32, 8)]
+}
+
+[sub_resource type="Animation" id="Animation_05w1x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(32, 8, 32, 8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vk3iq"]
+_data = {
+&"Idle": SubResource("Animation_x77am"),
+&"RESET": SubResource("Animation_05w1x")
+}
+
+[node name="Player" type="CharacterBody2D" unique_id=463079188]
+script = ExtResource("1_qmp4t")
+Speed = 5.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2012428963]
+texture_filter = 1
+texture = SubResource("AtlasTexture_jd1co")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1936362687]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_ep440")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1289476220]
+libraries/ = SubResource("AnimationLibrary_vk3iq")
+autoplay = &"Idle"
