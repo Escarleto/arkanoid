@@ -31,6 +31,14 @@ region = Rect2(32, 8, 16, 8)
 atlas = ExtResource("1_mtu4g")
 region = Rect2(48, 8, 16, 8)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7p6j4"]
+atlas = ExtResource("1_mtu4g")
+region = Rect2(0, 16, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6444e"]
+atlas = ExtResource("1_mtu4g")
+region = Rect2(0, 24, 16, 8)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ciykk"]
 atlas = ExtResource("1_mtu4g")
 region = Rect2(0, 0, 16, 8)
@@ -40,7 +48,7 @@ size = Vector2(16, 8)
 
 [node name="Bloco" type="StaticBody2D" unique_id=998144320]
 script = ExtResource("1_gb5kq")
-StateTextures = Array[Texture2D]([SubResource("AtlasTexture_gwqqb"), SubResource("AtlasTexture_lyndf"), SubResource("AtlasTexture_5iyxf"), SubResource("AtlasTexture_jnxdm"), SubResource("AtlasTexture_d006p"), SubResource("AtlasTexture_afi6u"), SubResource("AtlasTexture_wjyre")])
+StateTextures = Array[Texture2D]([SubResource("AtlasTexture_gwqqb"), SubResource("AtlasTexture_lyndf"), SubResource("AtlasTexture_5iyxf"), SubResource("AtlasTexture_jnxdm"), SubResource("AtlasTexture_d006p"), SubResource("AtlasTexture_afi6u"), SubResource("AtlasTexture_wjyre"), SubResource("AtlasTexture_7p6j4"), SubResource("AtlasTexture_6444e")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2094847915]
 texture_filter = 1
