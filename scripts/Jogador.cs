@@ -4,7 +4,7 @@ using System;
 public partial class Jogador : CharacterBody2D
 {
 	private int CurrentHealth = 2;
-	public int Health
+	private int Health
 	{
 		get => CurrentHealth;
 		set
@@ -15,8 +15,16 @@ public partial class Jogador : CharacterBody2D
 		}
 	}
 	private float H_Direction = 0;
+	private Vector2 SpawnPos;
 	[Export] private float Speed = 1f;
 	[Export] private float SpeedFallofRate = 1f;
+
+	public override void _Ready()
+	{
+		base._Ready();
+		SpawnPos = Position;
+		MainGame.Instance.RestartLevel += Respawn;
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -25,5 +33,11 @@ public partial class Jogador : CharacterBody2D
 
 		Velocity = new Vector2(H_Direction * Speed, 0f);
 		MoveAndSlide();
+	}
+
+	private void Respawn()
+	{
+		Position = SpawnPos;
+		Health--;
 	}
 }

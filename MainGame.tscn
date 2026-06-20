@@ -4,24 +4,47 @@
 [ext_resource type="PackedScene" uid="uid://bpiar38hmbp22" path="res://Scenes/HUD.tscn" id="2_ws5ob"]
 [ext_resource type="PackedScene" uid="uid://bnvqlviprpf7u" path="res://Scenes/Bola.tscn" id="4_8qpgq"]
 [ext_resource type="PackedScene" uid="uid://i0imvylwmlcy" path="res://Scenes/Jogador.tscn" id="4_bqqt8"]
+[ext_resource type="Script" uid="uid://cb22rcgsy4bgs" path="res://scripts/death_area.cs" id="5_8qpgq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqqt8"]
+size = Vector2(224, 16)
 
 [node name="MainGame" type="Node2D" unique_id=1778983138 node_paths=PackedStringArray("hud")]
+process_mode = 3
 script = ExtResource("1_bqqt8")
 hud = NodePath("HUD")
 
+[node name="Restart" type="Timer" parent="." unique_id=2002351921]
+
 [node name="Boundries" type="StaticBody2D" parent="." unique_id=1075662199]
+process_mode = 1
 position = Vector2(112, 128)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundries" unique_id=1004207924]
 polygon = PackedVector2Array(-112, -96, -112, 144, -104, 144, -104, -88, 104, -88, 104, 144, 112, 144, 112, -96)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1681976700]
+process_mode = 1
 offset = Vector2(112, 128)
 
 [node name="HUD" parent="." unique_id=273616356 instance=ExtResource("2_ws5ob")]
 
 [node name="Jogador" parent="." unique_id=1414349258 instance=ExtResource("4_bqqt8")]
+process_mode = 1
 position = Vector2(112, 236)
 
-[node name="Bola" parent="." unique_id=76314033 instance=ExtResource("4_8qpgq")]
+[node name="Bola" parent="." unique_id=76314033 node_paths=PackedStringArray("Jog") instance=ExtResource("4_8qpgq")]
+process_mode = 1
 position = Vector2(112, 200)
+Jog = NodePath("../Jogador")
+
+[node name="DeathArea" type="Area2D" parent="." unique_id=1332689236]
+process_mode = 1
+position = Vector2(112, 288)
+script = ExtResource("5_8qpgq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea" unique_id=1629123052]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_bqqt8")
+
+[connection signal="body_entered" from="DeathArea" to="Bola" method="Respawn"]

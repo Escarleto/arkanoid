@@ -4,11 +4,12 @@ using System;
 public partial class Bola : CharacterBody2D
 {
     [Export] private float Speed = 1f;
-    private Jogador Jog;
+    private Vector2 SpawnPos;
 
     public override void _Ready()
     {
         base._Ready();
+        SpawnPos = Position;
         RotationDegrees = (float)GD.RandRange(45f, 135f);
     }
 
@@ -18,26 +19,27 @@ public partial class Bola : CharacterBody2D
         Vector2 Movement = Vector2.Right.Rotated(Rotation) * Speed * (float)delta;
         KinematicCollision2D Collision = MoveAndCollide(Movement);
 
-        if (Collision != null)
-        {
-            if (Collision.GetCollider() is Jogador)
-            {
-                Jog = Collision.GetCollider() as Jogador;
-                Rotation = Jog.GlobalPosition.DirectionTo(GlobalPosition).Angle();
-                Jog = null;
-            }
-            else
-            {
-                Rotation = Vector2.FromAngle(Rotation).Bounce(Collision.GetNormal()).Angle();   
-                if (Collision.GetCollider() is Bloco)
-                {
-                    Bloco BlocoAcertado = Collision.GetCollider() as Bloco;
-                    BlocoAcertado.Health--;
-                }
-            }
-                         
-        }
+        if (Collision == null) return;
 
+        if (Collision.GetCollider() is Jogador)
+        {
+            Node2D Jog = Collision.GetCollider() as Node2D;
+            Rotation = Jog.GlobalPosition.DirectionTo(GlobalPosition).Angle();
+        }  
+        else
+        {
+            Rotation = Vector2.FromAngle(Rotation).Bounce(Collision.GetNormal()).Angle();   
+            if (Collision.GetCollider() is Bloco)
+            {
+                Bloco BlocoAcertado = Collision.GetCollider() as Bloco;
+                BlocoAcertado.Health--;
+            }
+        }
     }
 
+    private void Respawn(Node2D Body)
+	{
+		Position = SpawnPos;
+        MainGame.Instance.RestartLevel?.Invoke();
+    }
 }

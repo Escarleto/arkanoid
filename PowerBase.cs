@@ -8,6 +8,6 @@ public partial class PowerBase : Node2D
     
     private void ApplyState()
     {
-        _textureRect.Texture = StateTextures[(int)CurrentState];
+        //_textureRect.Texture = StateTextures[(int)CurrentState];
     }
 }
