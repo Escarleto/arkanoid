@@ -52,7 +52,7 @@ radius = 3.0
 motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("1_q3wno")
-Speed = 50.0
+Speed = 75.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1031120562]
 texture_filter = 1

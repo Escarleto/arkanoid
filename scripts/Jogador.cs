@@ -10,6 +10,7 @@ public partial class Jogador : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
+		base._PhysicsProcess(delta);
 		H_Direction = Mathf.MoveToward(H_Direction, Input.GetAxis("ui_left", "ui_right"), SpeedFallofRate * (float)delta);
 
 		Velocity = new Vector2(H_Direction * Speed, 0f);
