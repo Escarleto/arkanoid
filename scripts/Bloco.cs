@@ -16,10 +16,7 @@ public partial class Bloco : StaticBody2D
         {
             CurrentHealth = value;
             if (value == 0)
-            {
-                Debug.Print(CurrentHealth.ToString());
                 QueueFree();
-            }
         }
     }
     public override void _Ready()

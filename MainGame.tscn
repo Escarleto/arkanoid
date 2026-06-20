@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://bpiar38hmbp22" path="res://Scenes/HUD.tscn" id="2_ws5ob"]
 [ext_resource type="PackedScene" uid="uid://bnvqlviprpf7u" path="res://Scenes/Bola.tscn" id="4_8qpgq"]
 [ext_resource type="PackedScene" uid="uid://i0imvylwmlcy" path="res://Scenes/Jogador.tscn" id="4_bqqt8"]
-[ext_resource type="PackedScene" uid="uid://2k2f4l63pf4k" path="res://Scenes/bloco.tscn" id="5_8qpgq"]
 
 [node name="MainGame" type="Node2D" unique_id=1778983138 node_paths=PackedStringArray("hud")]
 script = ExtResource("1_bqqt8")
@@ -25,36 +24,4 @@ offset = Vector2(112, 128)
 position = Vector2(112, 236)
 
 [node name="Bola" parent="." unique_id=76314033 instance=ExtResource("4_8qpgq")]
-position = Vector2(112, 152)
-
-[node name="Bloco2" parent="." unique_id=998144320 instance=ExtResource("5_8qpgq")]
-position = Vector2(40, 100)
-CurrentHealth = 2
-
-[node name="Bloco3" parent="." unique_id=1694715238 instance=ExtResource("5_8qpgq")]
-position = Vector2(88, 100)
-CurrentHealth = 2
-
-[node name="Bloco5" parent="." unique_id=311771429 instance=ExtResource("5_8qpgq")]
-position = Vector2(136, 100)
-CurrentHealth = 2
-
-[node name="Bloco6" parent="." unique_id=1800073634 instance=ExtResource("5_8qpgq")]
-position = Vector2(184, 100)
-CurrentHealth = 2
-
-[node name="Bloco7" parent="." unique_id=1058031706 instance=ExtResource("5_8qpgq")]
-position = Vector2(160, 100)
-CurrentHealth = 2
-
-[node name="Bloco8" parent="." unique_id=76174258 instance=ExtResource("5_8qpgq")]
-position = Vector2(112, 100)
-CurrentHealth = 2
-
-[node name="Bloco4" parent="." unique_id=1233994838 instance=ExtResource("5_8qpgq")]
-position = Vector2(64, 100)
-CurrentHealth = 2
-
-[node name="Bloco" parent="." unique_id=1659987447 instance=ExtResource("5_8qpgq")]
-position = Vector2(16, 100)
-CurrentHealth = 2
+position = Vector2(112, 200)

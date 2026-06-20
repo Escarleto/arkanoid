@@ -3,7 +3,17 @@ using System;
 
 public partial class Jogador : CharacterBody2D
 {
-	private int Vida = 2;
+	private int CurrentHealth = 2;
+	public int Health
+	{
+		get => CurrentHealth;
+		set
+		{
+			CurrentHealth = value;
+			if (value <= 0) MainGame.Instance.GameOver();
+				
+		}
+	}
 	private float H_Direction = 0;
 	[Export] private float Speed = 1f;
 	[Export] private float SpeedFallofRate = 1f;
