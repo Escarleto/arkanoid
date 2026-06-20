@@ -1,17 +1,13 @@
 using Godot;
 using System;
+using System.Diagnostics;
 // Assuming you have an AtlasTexture assigned to a Sprite2D
 public enum ColorAtlas { White, Orange, Blue, Green, Red, Pink, Yellow, Iron, Gold } 
 public partial class Bloco : StaticBody2D
 {
     [Export] public Texture2D[] StateTextures; // indexed to match enum order
     [Export] public ColorAtlas CurrentState = ColorAtlas.White;
-    private Area2D _detectionArea;
-
-    public CollisionShape2D Collision;
     private TextureRect _textureRect;
-    private Bola _bola;
-
     [Export] private int CurrentHealth = 1;
     public int Health
     {
@@ -19,7 +15,11 @@ public partial class Bloco : StaticBody2D
         set
         {
             CurrentHealth = value;
-            if (value == 0) QueueFree();
+            if (value == 0)
+            {
+                Debug.Print(CurrentHealth.ToString());
+                QueueFree();
+            }
         }
     }
     public override void _Ready()
@@ -31,17 +31,5 @@ public partial class Bloco : StaticBody2D
     private void ApplyState()
     {
         _textureRect.Texture = StateTextures[(int)CurrentState];
-    }
-
-    private void OnBodyEntered(Node2D body)
-    {
-        if (body is Bola bola)
-        {
-            DestroyBlock();
-        }
-    }
-    private void DestroyBlock()
-    {
-        QueueFree();
     }
 }
