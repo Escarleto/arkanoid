@@ -1,0 +1,190 @@
+[gd_scene format=3 uid="uid://buaah6tvd0kbw"]
+
+[ext_resource type="Script" uid="uid://u0lr8ccm83co" path="res://scripts/PowerUps/PU_Player.cs" id="1_p0l4m"]
+[ext_resource type="Texture2D" uid="uid://cmbj7uv0im6r3" path="res://Assets/Arcade - Arkanoid - Miscellaneous - Powerups.png" id="2_jt0e6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ypqx"]
+atlas = ExtResource("2_jt0e6")
+region = Rect2(0, 55, 18, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4ywi"]
+atlas = ExtResource("2_jt0e6")
+region = Rect2(16, 16, 16, 7)
+
+[sub_resource type="Animation" id="Animation_2q4lu"]
+resource_name = "Break"
+length = 1.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture:region")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 40, 16, 7), Rect2(16, 40, 16, 7), Rect2(32, 40, 16, 7), Rect2(48, 40, 16, 7), Rect2(64, 40, 16, 7), Rect2(80, 40, 16, 7), Rect2(96, 40, 16, 7), Rect2(112, 40, 16, 7)]
+}
+
+[sub_resource type="Animation" id="Animation_la12f"]
+resource_name = "Catch"
+length = 1.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture:region")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 8, 16, 7), Rect2(16, 8, 16, 7), Rect2(32, 8, 16, 7), Rect2(48, 8, 16, 7), Rect2(64, 8, 16, 7), Rect2(80, 8, 16, 7), Rect2(96, 8, 16, 7), Rect2(112, 8, 16, 7)]
+}
+
+[sub_resource type="Animation" id="Animation_0rokm"]
+resource_name = "Disruption"
+length = 1.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture:region")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 32, 16, 7), Rect2(16, 32, 16, 7), Rect2(32, 32, 16, 7), Rect2(48, 32, 16, 7), Rect2(64, 32, 16, 7), Rect2(80, 32, 16, 7), Rect2(96, 32, 16, 7), Rect2(112, 32, 16, 7)]
+}
+
+[sub_resource type="Animation" id="Animation_6blrw"]
+resource_name = "Enlarge"
+length = 1.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture:region")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 24, 16, 7), Rect2(16, 24, 16, 7), Rect2(32, 24, 16, 7), Rect2(48, 24, 16, 7), Rect2(64, 24, 16, 7), Rect2(80, 24, 16, 7), Rect2(96, 24, 16, 7), Rect2(112, 24, 16, 7)]
+}
+
+[sub_resource type="Animation" id="Animation_p3gd3"]
+resource_name = "Laser"
+length = 1.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture:region")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 16, 16, 7), Rect2(16, 16, 16, 7), Rect2(32, 16, 16, 7), Rect2(48, 16, 16, 7), Rect2(64, 16, 16, 7), Rect2(80, 16, 16, 7), Rect2(96, 16, 16, 7), Rect2(112, 16, 16, 7)]
+}
+
+[sub_resource type="Animation" id="Animation_8k8b4"]
+resource_name = "Player"
+length = 1.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture:region")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 48, 16, 7), Rect2(16, 48, 16, 7), Rect2(32, 48, 16, 7), Rect2(48, 48, 16, 7), Rect2(64, 48, 16, 7), Rect2(80, 48, 16, 7), Rect2(96, 48, 16, 7), Rect2(112, 48, 16, 7)]
+}
+
+[sub_resource type="Animation" id="Animation_d6ipt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture:region")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(16, 16, 16, 7)]
+}
+
+[sub_resource type="Animation" id="Animation_5t2u6"]
+resource_name = "Slow"
+length = 1.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture:region")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 0, 16, 7), Rect2(16, 0, 16, 7), Rect2(32, 0, 16, 7), Rect2(48, 0, 16, 7), Rect2(64, 0, 16, 7), Rect2(80, 0, 16, 7), Rect2(96, 0, 16, 7), Rect2(112, 0, 16, 7)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_igsw4"]
+_data = {
+&"Break": SubResource("Animation_2q4lu"),
+&"Catch": SubResource("Animation_la12f"),
+&"Disruption": SubResource("Animation_0rokm"),
+&"Enlarge": SubResource("Animation_6blrw"),
+&"Laser": SubResource("Animation_p3gd3"),
+&"Player": SubResource("Animation_8k8b4"),
+&"RESET": SubResource("Animation_d6ipt"),
+&"Slow": SubResource("Animation_5t2u6")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ep440"]
+radius = 5.0
+height = 22.0
+
+[node name="Player" type="Area2D" unique_id=1221663323]
+monitorable = false
+script = ExtResource("1_p0l4m")
+Type = 6
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=1886815425]
+texture_filter = 1
+texture = SubResource("AtlasTexture_3ypqx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=350623079]
+texture_filter = 1
+texture = SubResource("AtlasTexture_d4ywi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1183107308]
+libraries/ = SubResource("AnimationLibrary_igsw4")
+autoplay = &"Player"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=438764435]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_ep440")

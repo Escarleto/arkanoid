@@ -19,6 +19,7 @@ RestartTime = NodePath("Restart")
 levels = Array[PackedScene]([ExtResource("2_8dnxm"), ExtResource("3_v3hs3"), ExtResource("4_x5ji8")])
 
 [node name="Restart" type="Timer" parent="." unique_id=2002351921]
+wait_time = 2.0
 
 [node name="Boundries" type="StaticBody2D" parent="." unique_id=1075662199]
 process_mode = 1
@@ -39,7 +40,7 @@ position = Vector2(112, 236)
 
 [node name="Bola" parent="." unique_id=76314033 instance=ExtResource("4_8qpgq")]
 process_mode = 1
-position = Vector2(112, 200)
+position = Vector2(112, 176)
 
 [node name="DeathArea" type="Area2D" parent="." unique_id=1332689236]
 process_mode = 1

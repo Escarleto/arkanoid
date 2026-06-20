@@ -10,7 +10,7 @@ public partial class Bola : CharacterBody2D
     {
         base._Ready();
         SpawnPos = Position;
-        RotationDegrees = (float)GD.RandRange(45f, 135f);
+        RotationDegrees = (float)GD.RandRange(30f, 120f);
     }
 
     public override void _PhysicsProcess(double delta)
@@ -37,5 +37,9 @@ public partial class Bola : CharacterBody2D
         }
     }
 
-    private void Respawn() => Position = SpawnPos;
+    private void Respawn()
+    {
+        Position = SpawnPos;
+        RotationDegrees = (float)GD.RandRange(30f, 120f);
+    }
 }

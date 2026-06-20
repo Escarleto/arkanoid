@@ -50,7 +50,8 @@ _data = {
 }
 
 [node name="Jogador" type="CharacterBody2D" unique_id=1414349258]
-motion_mode = 1
+slide_on_ceiling = false
+platform_on_leave = 2
 script = ExtResource("1_qmp4t")
 Speed = 100.0
 SpeedFallofRate = 2.5
