@@ -1,76 +1,11 @@
-[gd_scene format=3 uid="uid://bvscr1vfpdsej"]
+[gd_scene format=3 uid="uid://bpm23fd1o1nag"]
 
 [ext_resource type="PackedScene" uid="uid://2k2f4l63pf4k" path="res://Scenes/bloco.tscn" id="2_12fag"]
 
-[node name="Level1" type="Node2D" unique_id=903423352]
+[node name="Level2" type="Node2D" unique_id=903423352]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1681996251]
 position = Vector2(0, -8)
-
-[node name="Bloco5" parent="Node2D" unique_id=998144320 instance=ExtResource("2_12fag")]
-position = Vector2(120, 72)
-CurrentState = 7
-CurrentHealth = 2
-
-[node name="Bloco6" parent="Node2D" unique_id=2116959896 instance=ExtResource("2_12fag")]
-position = Vector2(104, 72)
-CurrentState = 7
-CurrentHealth = 2
-
-[node name="Bloco7" parent="Node2D" unique_id=998926520 instance=ExtResource("2_12fag")]
-position = Vector2(88, 72)
-CurrentState = 7
-CurrentHealth = 2
-
-[node name="Bloco8" parent="Node2D" unique_id=414386198 instance=ExtResource("2_12fag")]
-position = Vector2(72, 72)
-CurrentState = 7
-CurrentHealth = 2
-
-[node name="Bloco9" parent="Node2D" unique_id=925339146 instance=ExtResource("2_12fag")]
-position = Vector2(184, 72)
-CurrentState = 7
-CurrentHealth = 2
-
-[node name="Bloco10" parent="Node2D" unique_id=1458293928 instance=ExtResource("2_12fag")]
-position = Vector2(168, 72)
-CurrentState = 7
-CurrentHealth = 2
-
-[node name="Bloco11" parent="Node2D" unique_id=1768406047 instance=ExtResource("2_12fag")]
-position = Vector2(152, 72)
-CurrentState = 7
-CurrentHealth = 2
-
-[node name="Bloco12" parent="Node2D" unique_id=1185798071 instance=ExtResource("2_12fag")]
-position = Vector2(136, 72)
-CurrentState = 7
-CurrentHealth = 2
-
-[node name="Bloco13" parent="Node2D" unique_id=1899132834 instance=ExtResource("2_12fag")]
-position = Vector2(200, 72)
-CurrentState = 7
-CurrentHealth = 2
-
-[node name="Bloco3" parent="Node2D" unique_id=459770819 instance=ExtResource("2_12fag")]
-position = Vector2(56, 72)
-CurrentState = 7
-CurrentHealth = 2
-
-[node name="Bloco4" parent="Node2D" unique_id=1156969891 instance=ExtResource("2_12fag")]
-position = Vector2(40, 72)
-CurrentState = 7
-CurrentHealth = 2
-
-[node name="Bloco2" parent="Node2D" unique_id=652176886 instance=ExtResource("2_12fag")]
-position = Vector2(24, 72)
-CurrentState = 7
-CurrentHealth = 2
-
-[node name="Bloco" parent="Node2D" unique_id=581838847 instance=ExtResource("2_12fag")]
-position = Vector2(8, 72)
-CurrentState = 7
-CurrentHealth = 2
 
 [node name="Bloco14" parent="Node2D" unique_id=2019207006 instance=ExtResource("2_12fag")]
 position = Vector2(120, 72)
@@ -137,58 +72,6 @@ position = Vector2(8, 72)
 CurrentState = 7
 CurrentHealth = 2
 
-[node name="Bloco27" parent="Node2D" unique_id=562742445 instance=ExtResource("2_12fag")]
-position = Vector2(120, 80)
-CurrentState = 4
-
-[node name="Bloco28" parent="Node2D" unique_id=735240001 instance=ExtResource("2_12fag")]
-position = Vector2(104, 80)
-CurrentState = 4
-
-[node name="Bloco29" parent="Node2D" unique_id=764018500 instance=ExtResource("2_12fag")]
-position = Vector2(88, 80)
-CurrentState = 4
-
-[node name="Bloco30" parent="Node2D" unique_id=1247507399 instance=ExtResource("2_12fag")]
-position = Vector2(72, 80)
-CurrentState = 4
-
-[node name="Bloco31" parent="Node2D" unique_id=1124242505 instance=ExtResource("2_12fag")]
-position = Vector2(184, 80)
-CurrentState = 4
-
-[node name="Bloco32" parent="Node2D" unique_id=517795059 instance=ExtResource("2_12fag")]
-position = Vector2(168, 80)
-CurrentState = 4
-
-[node name="Bloco33" parent="Node2D" unique_id=247752640 instance=ExtResource("2_12fag")]
-position = Vector2(152, 80)
-CurrentState = 4
-
-[node name="Bloco34" parent="Node2D" unique_id=1285178044 instance=ExtResource("2_12fag")]
-position = Vector2(136, 80)
-CurrentState = 4
-
-[node name="Bloco35" parent="Node2D" unique_id=1853695960 instance=ExtResource("2_12fag")]
-position = Vector2(200, 80)
-CurrentState = 4
-
-[node name="Bloco36" parent="Node2D" unique_id=670456185 instance=ExtResource("2_12fag")]
-position = Vector2(56, 80)
-CurrentState = 4
-
-[node name="Bloco37" parent="Node2D" unique_id=1409628320 instance=ExtResource("2_12fag")]
-position = Vector2(40, 80)
-CurrentState = 4
-
-[node name="Bloco38" parent="Node2D" unique_id=1283781742 instance=ExtResource("2_12fag")]
-position = Vector2(24, 80)
-CurrentState = 4
-
-[node name="Bloco39" parent="Node2D" unique_id=1738321784 instance=ExtResource("2_12fag")]
-position = Vector2(8, 80)
-CurrentState = 4
-
 [node name="Bloco40" parent="Node2D" unique_id=890867748 instance=ExtResource("2_12fag")]
 position = Vector2(120, 80)
 CurrentState = 4
@@ -240,58 +123,6 @@ CurrentState = 4
 [node name="Bloco52" parent="Node2D" unique_id=276028901 instance=ExtResource("2_12fag")]
 position = Vector2(8, 80)
 CurrentState = 4
-
-[node name="Bloco53" parent="Node2D" unique_id=1619552655 instance=ExtResource("2_12fag")]
-position = Vector2(120, 88)
-CurrentState = 6
-
-[node name="Bloco54" parent="Node2D" unique_id=128205427 instance=ExtResource("2_12fag")]
-position = Vector2(104, 88)
-CurrentState = 6
-
-[node name="Bloco55" parent="Node2D" unique_id=1744311452 instance=ExtResource("2_12fag")]
-position = Vector2(88, 88)
-CurrentState = 6
-
-[node name="Bloco56" parent="Node2D" unique_id=1625708772 instance=ExtResource("2_12fag")]
-position = Vector2(72, 88)
-CurrentState = 6
-
-[node name="Bloco57" parent="Node2D" unique_id=771628132 instance=ExtResource("2_12fag")]
-position = Vector2(184, 88)
-CurrentState = 6
-
-[node name="Bloco58" parent="Node2D" unique_id=1247904376 instance=ExtResource("2_12fag")]
-position = Vector2(168, 88)
-CurrentState = 6
-
-[node name="Bloco59" parent="Node2D" unique_id=1216315191 instance=ExtResource("2_12fag")]
-position = Vector2(152, 88)
-CurrentState = 6
-
-[node name="Bloco60" parent="Node2D" unique_id=616251875 instance=ExtResource("2_12fag")]
-position = Vector2(136, 88)
-CurrentState = 6
-
-[node name="Bloco61" parent="Node2D" unique_id=1455193312 instance=ExtResource("2_12fag")]
-position = Vector2(200, 88)
-CurrentState = 6
-
-[node name="Bloco62" parent="Node2D" unique_id=1244855490 instance=ExtResource("2_12fag")]
-position = Vector2(56, 88)
-CurrentState = 6
-
-[node name="Bloco63" parent="Node2D" unique_id=721644276 instance=ExtResource("2_12fag")]
-position = Vector2(40, 88)
-CurrentState = 6
-
-[node name="Bloco64" parent="Node2D" unique_id=861963981 instance=ExtResource("2_12fag")]
-position = Vector2(24, 88)
-CurrentState = 6
-
-[node name="Bloco65" parent="Node2D" unique_id=1751603396 instance=ExtResource("2_12fag")]
-position = Vector2(8, 88)
-CurrentState = 6
 
 [node name="Bloco66" parent="Node2D" unique_id=1664239989 instance=ExtResource("2_12fag")]
 position = Vector2(120, 88)
@@ -345,58 +176,6 @@ CurrentState = 6
 position = Vector2(8, 88)
 CurrentState = 6
 
-[node name="Bloco79" parent="Node2D" unique_id=1551013732 instance=ExtResource("2_12fag")]
-position = Vector2(120, 96)
-CurrentState = 2
-
-[node name="Bloco80" parent="Node2D" unique_id=1062018044 instance=ExtResource("2_12fag")]
-position = Vector2(104, 96)
-CurrentState = 2
-
-[node name="Bloco81" parent="Node2D" unique_id=599112167 instance=ExtResource("2_12fag")]
-position = Vector2(88, 96)
-CurrentState = 2
-
-[node name="Bloco82" parent="Node2D" unique_id=2112120150 instance=ExtResource("2_12fag")]
-position = Vector2(72, 96)
-CurrentState = 2
-
-[node name="Bloco83" parent="Node2D" unique_id=138363991 instance=ExtResource("2_12fag")]
-position = Vector2(184, 96)
-CurrentState = 2
-
-[node name="Bloco84" parent="Node2D" unique_id=2102348056 instance=ExtResource("2_12fag")]
-position = Vector2(168, 96)
-CurrentState = 2
-
-[node name="Bloco85" parent="Node2D" unique_id=193341151 instance=ExtResource("2_12fag")]
-position = Vector2(152, 96)
-CurrentState = 2
-
-[node name="Bloco86" parent="Node2D" unique_id=1934050590 instance=ExtResource("2_12fag")]
-position = Vector2(136, 96)
-CurrentState = 2
-
-[node name="Bloco87" parent="Node2D" unique_id=1990685461 instance=ExtResource("2_12fag")]
-position = Vector2(200, 96)
-CurrentState = 2
-
-[node name="Bloco88" parent="Node2D" unique_id=1189595695 instance=ExtResource("2_12fag")]
-position = Vector2(56, 96)
-CurrentState = 2
-
-[node name="Bloco89" parent="Node2D" unique_id=1021036958 instance=ExtResource("2_12fag")]
-position = Vector2(40, 96)
-CurrentState = 2
-
-[node name="Bloco90" parent="Node2D" unique_id=1235246547 instance=ExtResource("2_12fag")]
-position = Vector2(24, 96)
-CurrentState = 2
-
-[node name="Bloco91" parent="Node2D" unique_id=1077016262 instance=ExtResource("2_12fag")]
-position = Vector2(8, 96)
-CurrentState = 2
-
 [node name="Bloco92" parent="Node2D" unique_id=292172939 instance=ExtResource("2_12fag")]
 position = Vector2(120, 96)
 CurrentState = 2
@@ -448,58 +227,6 @@ CurrentState = 2
 [node name="Bloco104" parent="Node2D" unique_id=562758565 instance=ExtResource("2_12fag")]
 position = Vector2(8, 96)
 CurrentState = 2
-
-[node name="Bloco105" parent="Node2D" unique_id=696503880 instance=ExtResource("2_12fag")]
-position = Vector2(120, 104)
-CurrentState = 5
-
-[node name="Bloco106" parent="Node2D" unique_id=1913538384 instance=ExtResource("2_12fag")]
-position = Vector2(104, 104)
-CurrentState = 5
-
-[node name="Bloco107" parent="Node2D" unique_id=1761597109 instance=ExtResource("2_12fag")]
-position = Vector2(88, 104)
-CurrentState = 5
-
-[node name="Bloco108" parent="Node2D" unique_id=2131868175 instance=ExtResource("2_12fag")]
-position = Vector2(72, 104)
-CurrentState = 5
-
-[node name="Bloco109" parent="Node2D" unique_id=1229477036 instance=ExtResource("2_12fag")]
-position = Vector2(184, 104)
-CurrentState = 5
-
-[node name="Bloco110" parent="Node2D" unique_id=1266703239 instance=ExtResource("2_12fag")]
-position = Vector2(168, 104)
-CurrentState = 5
-
-[node name="Bloco111" parent="Node2D" unique_id=2058930773 instance=ExtResource("2_12fag")]
-position = Vector2(152, 104)
-CurrentState = 5
-
-[node name="Bloco112" parent="Node2D" unique_id=1159682834 instance=ExtResource("2_12fag")]
-position = Vector2(136, 104)
-CurrentState = 5
-
-[node name="Bloco113" parent="Node2D" unique_id=438084934 instance=ExtResource("2_12fag")]
-position = Vector2(200, 104)
-CurrentState = 5
-
-[node name="Bloco114" parent="Node2D" unique_id=629197733 instance=ExtResource("2_12fag")]
-position = Vector2(56, 104)
-CurrentState = 5
-
-[node name="Bloco115" parent="Node2D" unique_id=2102670515 instance=ExtResource("2_12fag")]
-position = Vector2(40, 104)
-CurrentState = 5
-
-[node name="Bloco116" parent="Node2D" unique_id=338507017 instance=ExtResource("2_12fag")]
-position = Vector2(24, 104)
-CurrentState = 5
-
-[node name="Bloco117" parent="Node2D" unique_id=1322898424 instance=ExtResource("2_12fag")]
-position = Vector2(8, 104)
-CurrentState = 5
 
 [node name="Bloco118" parent="Node2D" unique_id=740219605 instance=ExtResource("2_12fag")]
 position = Vector2(120, 104)
@@ -602,57 +329,5 @@ position = Vector2(24, 112)
 CurrentState = 3
 
 [node name="Bloco143" parent="Node2D" unique_id=793732402 instance=ExtResource("2_12fag")]
-position = Vector2(8, 112)
-CurrentState = 3
-
-[node name="Bloco144" parent="Node2D" unique_id=1175819565 instance=ExtResource("2_12fag")]
-position = Vector2(120, 112)
-CurrentState = 3
-
-[node name="Bloco145" parent="Node2D" unique_id=2109178202 instance=ExtResource("2_12fag")]
-position = Vector2(104, 112)
-CurrentState = 3
-
-[node name="Bloco146" parent="Node2D" unique_id=1018390116 instance=ExtResource("2_12fag")]
-position = Vector2(88, 112)
-CurrentState = 3
-
-[node name="Bloco147" parent="Node2D" unique_id=1919029677 instance=ExtResource("2_12fag")]
-position = Vector2(72, 112)
-CurrentState = 3
-
-[node name="Bloco148" parent="Node2D" unique_id=44650275 instance=ExtResource("2_12fag")]
-position = Vector2(184, 112)
-CurrentState = 3
-
-[node name="Bloco149" parent="Node2D" unique_id=987052511 instance=ExtResource("2_12fag")]
-position = Vector2(168, 112)
-CurrentState = 3
-
-[node name="Bloco150" parent="Node2D" unique_id=2063462226 instance=ExtResource("2_12fag")]
-position = Vector2(152, 112)
-CurrentState = 3
-
-[node name="Bloco151" parent="Node2D" unique_id=283079910 instance=ExtResource("2_12fag")]
-position = Vector2(136, 112)
-CurrentState = 3
-
-[node name="Bloco152" parent="Node2D" unique_id=1085150497 instance=ExtResource("2_12fag")]
-position = Vector2(200, 112)
-CurrentState = 3
-
-[node name="Bloco153" parent="Node2D" unique_id=1129537322 instance=ExtResource("2_12fag")]
-position = Vector2(56, 112)
-CurrentState = 3
-
-[node name="Bloco154" parent="Node2D" unique_id=344200084 instance=ExtResource("2_12fag")]
-position = Vector2(40, 112)
-CurrentState = 3
-
-[node name="Bloco155" parent="Node2D" unique_id=395482466 instance=ExtResource("2_12fag")]
-position = Vector2(24, 112)
-CurrentState = 3
-
-[node name="Bloco156" parent="Node2D" unique_id=1345297058 instance=ExtResource("2_12fag")]
 position = Vector2(8, 112)
 CurrentState = 3
