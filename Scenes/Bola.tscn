@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bnvqlviprpf7u"]
 
-[ext_resource type="Texture2D" uid="uid://c6drl2r0gfdhx" path="res://Assets/Arcade - Arkanoid - Playable Characters - Vaus.png" id="1_l2odm"]
-[ext_resource type="Script" uid="uid://bpvvhk78e36ni" path="res://scripts/Bola.cs" id="1_myq1w"]
+[ext_resource type="Script" uid="uid://bpvvhk78e36ni" path="res://scripts/Bola.cs" id="1_q3wno"]
+[ext_resource type="Texture2D" uid="uid://c6drl2r0gfdhx" path="res://Assets/Arcade - Arkanoid - Playable Characters - Vaus.png" id="2_7bn58"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ep440"]
-atlas = ExtResource("1_l2odm")
+atlas = ExtResource("2_7bn58")
 region = Rect2(0, 40, 5, 4)
 
 [sub_resource type="Animation" id="Animation_l2odm"]
@@ -49,7 +49,10 @@ _data = {
 radius = 3.0
 
 [node name="Bola" type="CharacterBody2D" unique_id=76314033]
-script = ExtResource("1_myq1w")
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_q3wno")
+Speed = 50.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1031120562]
 texture_filter = 1
