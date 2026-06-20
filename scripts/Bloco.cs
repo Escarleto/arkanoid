@@ -9,6 +9,7 @@ public partial class Bloco : StaticBody2D
     private TextureRect _textureRect;
     [Export] public ColorAtlas CurrentState = ColorAtlas.White;
     [Export] private int CurrentHealth = 1;
+    
     public int Health
     {
         get => CurrentHealth;
@@ -18,6 +19,7 @@ public partial class Bloco : StaticBody2D
             if (value == 0)
             {
                 MainGame.Instance.LevelBlocks--;
+                PowerUp.TrySpawn(GetParent(), GlobalPosition);
                 QueueFree();
             }
         }

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://beqi5ekst4eu0" path="res://scripts/Bloco.cs" id="1_gb5kq"]
 [ext_resource type="Texture2D" uid="uid://p81ueh6i118" path="res://Assets/Arcade - Arkanoid - Miscellaneous - Blocks & Backgrounds.png" id="1_mtu4g"]
+[ext_resource type="PackedScene" uid="uid://b0bjev4y1aghl" path="res://Scenes/PowerUps/power_Disruption.tscn" id="3_lyndf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gwqqb"]
 atlas = ExtResource("1_mtu4g")
@@ -49,6 +50,7 @@ size = Vector2(16, 8)
 [node name="Bloco" type="StaticBody2D" unique_id=998144320]
 script = ExtResource("1_gb5kq")
 StateTextures = Array[Texture2D]([SubResource("AtlasTexture_gwqqb"), SubResource("AtlasTexture_lyndf"), SubResource("AtlasTexture_5iyxf"), SubResource("AtlasTexture_jnxdm"), SubResource("AtlasTexture_d006p"), SubResource("AtlasTexture_afi6u"), SubResource("AtlasTexture_wjyre"), SubResource("AtlasTexture_7p6j4"), SubResource("AtlasTexture_6444e")])
+PowerUpScene = ExtResource("3_lyndf")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2094847915]
 texture_filter = 1
