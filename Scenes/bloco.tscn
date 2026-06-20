@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://2k2f4l63pf4k"]
+
+[ext_resource type="Script" uid="uid://beqi5ekst4eu0" path="res://scripts/Bloco.cs" id="1_gb5kq"]
+[ext_resource type="Texture2D" uid="uid://p81ueh6i118" path="res://Assets/Arcade - Arkanoid - Miscellaneous - Blocks & Backgrounds.png" id="1_mtu4g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwqqb"]
+atlas = ExtResource("1_mtu4g")
+region = Rect2(0, 0, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyndf"]
+atlas = ExtResource("1_mtu4g")
+region = Rect2(16, 0, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5iyxf"]
+atlas = ExtResource("1_mtu4g")
+region = Rect2(32, 0, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnxdm"]
+atlas = ExtResource("1_mtu4g")
+region = Rect2(48, 0, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d006p"]
+atlas = ExtResource("1_mtu4g")
+region = Rect2(0, 8, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afi6u"]
+atlas = ExtResource("1_mtu4g")
+region = Rect2(32, 8, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjyre"]
+atlas = ExtResource("1_mtu4g")
+region = Rect2(48, 8, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ciykk"]
+atlas = ExtResource("1_mtu4g")
+region = Rect2(0, 0, 16, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciykk"]
+size = Vector2(16, 8)
+
+[node name="Bloco" type="StaticBody2D" unique_id=998144320]
+script = ExtResource("1_gb5kq")
+StateTextures = Array[Texture2D]([SubResource("AtlasTexture_gwqqb"), SubResource("AtlasTexture_lyndf"), SubResource("AtlasTexture_5iyxf"), SubResource("AtlasTexture_jnxdm"), SubResource("AtlasTexture_d006p"), SubResource("AtlasTexture_afi6u"), SubResource("AtlasTexture_wjyre")])
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2094847915]
+texture_filter = 1
+offset_right = 16.0
+offset_bottom = 8.0
+texture = SubResource("AtlasTexture_ciykk")
+stretch_mode = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1631652818]
+position = Vector2(8, 4)
+shape = SubResource("RectangleShape2D_ciykk")
