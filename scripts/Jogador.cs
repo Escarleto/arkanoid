@@ -23,7 +23,6 @@ public partial class Jogador : CharacterBody2D
 	{
 		base._Ready();
 		SpawnPos = Position;
-		MainGame.Instance.RestartLevel += Respawn;
 	}
 
 	public override void _PhysicsProcess(double delta)

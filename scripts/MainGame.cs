@@ -24,11 +24,9 @@ public partial class MainGame : Node2D
     [Export] public Hud hud;
     [Export] private Timer RestartTime;
 
-    public Action RestartLevel;
     public override void _Ready()
     {
         Instance = this;
-        RestartLevel += Restart;
         Label lifeValue = hud.life;
         Label scoreValue = hud.score;
         
@@ -50,16 +48,22 @@ public partial class MainGame : Node2D
         _currentLevelInstance = levels[CurrentLevel].Instantiate();
         AddChild(_currentLevelInstance);
     }
-    private void Restart()
+
+    [Signal] public delegate void RestartLevelEventHandler();
+    public void Restart(Node2D Body)
     {
-        GetTree().Paused = true;
-        RestartTime.Start();
+        if (Body is Bola)
+        {
+            EmitSignal("RestartLevel");
+            GetTree().Paused = true;
+            RestartTime.Start();
+        }
     }
+
+    public void OnRestartTimeout() => GetTree().Paused = false;
 
     public void GameOver()
     {
         GD.Print("Game ovi");
     }
-
-    
 }

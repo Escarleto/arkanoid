@@ -37,9 +37,5 @@ public partial class Bola : CharacterBody2D
         }
     }
 
-    private void Respawn(Node2D Body)
-	{
-		Position = SpawnPos;
-        MainGame.Instance.RestartLevel?.Invoke();
-    }
+    private void Respawn() => Position = SpawnPos;
 }
