@@ -4,14 +4,15 @@ using System;
 public partial class Jogador : CharacterBody2D
 {
 	private int CurrentHealth = 2;
-	private int Health
+	[Signal] public delegate int LifeChangedEventHandler(int NewHealth);
+	public int Health
 	{
 		get => CurrentHealth;
 		set
 		{
 			CurrentHealth = value;
+			EmitSignal("LifeChanged", value);
 			if (value <= 0) MainGame.Instance.GameOver();
-				
 		}
 	}
 	private float H_Direction = 0;
@@ -22,6 +23,7 @@ public partial class Jogador : CharacterBody2D
 	public override void _Ready()
 	{
 		base._Ready();
+		EmitSignal("LifeChanged", CurrentHealth);
 		SpawnPos = Position;
 	}
 

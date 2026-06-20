@@ -17,7 +17,6 @@ public partial class MainGame : Node2D
                 GoNext(CurrentLevel+1);
                 GD.Print("Level completo");
             }
-            GD.Print(CurrentLevelBlocks);
         }
     }
 
@@ -29,7 +28,6 @@ public partial class MainGame : Node2D
         Instance = this;
         Label lifeValue = hud.life;
         Label scoreValue = hud.score;
-        
     }
 
     [Export] public PackedScene[] levels;
@@ -39,14 +37,13 @@ public partial class MainGame : Node2D
         _currentLevelInstance?.QueueFree();
         CurrentLevel = levelIndex;
         
-        
         if (CurrentLevel >= levels.Length)
         {
             GD.Print("All levels complete!");
             return;
         }
         _currentLevelInstance = levels[CurrentLevel].Instantiate();
-        AddChild(_currentLevelInstance);
+        GetTree().Root.AddChild(_currentLevelInstance);
     }
 
     [Signal] public delegate void RestartLevelEventHandler();

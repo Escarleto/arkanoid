@@ -53,4 +53,5 @@ shape = SubResource("RectangleShape2D_bqqt8")
 [connection signal="RestartLevel" from="." to="Jogador" method="Respawn"]
 [connection signal="RestartLevel" from="." to="Bola" method="Respawn"]
 [connection signal="timeout" from="Restart" to="." method="OnRestartTimeout"]
+[connection signal="LifeChanged" from="Jogador" to="HUD" method="UpdateLifes"]
 [connection signal="body_entered" from="DeathArea" to="." method="Restart"]
