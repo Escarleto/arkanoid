@@ -17,9 +17,9 @@ font_color = Color(1, 0, 0, 1)
 font = ExtResource("4_t385i")
 font_size = 20
 
-[node name="HUD" type="Node2D" unique_id=273616356 node_paths=PackedStringArray("score", "life")]
+[node name="HUD" type="Node2D" unique_id=273616356 node_paths=PackedStringArray("scoreTxt", "life")]
 script = ExtResource("1_s3jbq")
-score = NodePath("Header - HighScore/Score")
+scoreTxt = NodePath("Header - HighScore/Score")
 life = NodePath("Header - Lifes/life")
 metadata/_edit_horizontal_guides_ = [-8.0, 13.0]
 
@@ -35,17 +35,19 @@ scale = Vector2(0.99557525, 1)
 texture = SubResource("AtlasTexture_ciykk")
 
 [node name="Header - HighScore" type="Label" parent="." unique_id=1601056147]
+texture_filter = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 80.0
-offset_right = 148.0
+offset_left = 144.0
+offset_right = 212.0
 offset_bottom = 16.0
 grow_horizontal = 2
-text = "HIGH SCORE"
+text = "SCORE"
 label_settings = SubResource("LabelSettings_ciykk")
 
 [node name="Score" type="Label" parent="Header - HighScore" unique_id=1990841347]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -59,6 +61,7 @@ label_settings = SubResource("LabelSettings_6ungf")
 vertical_alignment = 1
 
 [node name="Header - Lifes" type="Label" parent="." unique_id=448399583]
+texture_filter = 1
 offset_left = 8.0
 offset_right = 48.0
 offset_bottom = 23.0
@@ -67,6 +70,7 @@ label_settings = SubResource("LabelSettings_ciykk")
 horizontal_alignment = 1
 
 [node name="life" type="Label" parent="Header - Lifes" unique_id=202768070]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

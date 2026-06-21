@@ -1,377 +1,373 @@
-[gd_scene format=3 uid="uid://bvscr1vfpdsej"]
+[gd_scene format=3 uid="uid://c3ayy8leovokh"]
 
 [ext_resource type="Script" uid="uid://8jwug387uuj3" path="res://Scenes/levelDebug.cs" id="1_smnlx"]
 [ext_resource type="PackedScene" uid="uid://2k2f4l63pf4k" path="res://Scenes/bloco.tscn" id="2_xfk5q"]
 
-[node name="Level2" type="Node2D" unique_id=903423352]
+[node name="Level2" type="Node2D" unique_id=1526815411]
 script = ExtResource("1_smnlx")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1681996251]
+[node name="Node2D" type="Node2D" parent="." unique_id=1484364223]
 position = Vector2(0, -8)
 
-[node name="Bloco2" parent="Node2D" unique_id=652176886 instance=ExtResource("2_xfk5q")]
+[node name="Bloco2" parent="Node2D" unique_id=998144320 instance=ExtResource("2_xfk5q")]
 position = Vector2(24, 72)
 CurrentState = 2
 
-[node name="Bloco" parent="Node2D" unique_id=581838847 instance=ExtResource("2_xfk5q")]
+[node name="Bloco" parent="Node2D" unique_id=415178278 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 72)
 CurrentState = 5
 
-[node name="Bloco27" parent="Node2D" unique_id=998144320 instance=ExtResource("2_xfk5q")]
+[node name="Bloco27" parent="Node2D" unique_id=2007160760 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 64)
 CurrentState = 5
 
-[node name="Bloco37" parent="Node2D" unique_id=1409628320 instance=ExtResource("2_xfk5q")]
+[node name="Bloco37" parent="Node2D" unique_id=595536384 instance=ExtResource("2_xfk5q")]
 position = Vector2(40, 80)
 CurrentState = 3
 
-[node name="Bloco38" parent="Node2D" unique_id=1283781742 instance=ExtResource("2_xfk5q")]
+[node name="Bloco38" parent="Node2D" unique_id=1983837682 instance=ExtResource("2_xfk5q")]
 position = Vector2(24, 80)
 CurrentState = 2
 
-[node name="Bloco39" parent="Node2D" unique_id=1738321784 instance=ExtResource("2_xfk5q")]
+[node name="Bloco39" parent="Node2D" unique_id=1042869285 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 80)
 CurrentState = 5
 
-[node name="Bloco62" parent="Node2D" unique_id=1244855490 instance=ExtResource("2_xfk5q")]
+[node name="Bloco62" parent="Node2D" unique_id=956054451 instance=ExtResource("2_xfk5q")]
 position = Vector2(56, 88)
 
-[node name="Bloco63" parent="Node2D" unique_id=721644276 instance=ExtResource("2_xfk5q")]
+[node name="Bloco63" parent="Node2D" unique_id=2069304433 instance=ExtResource("2_xfk5q")]
 position = Vector2(40, 88)
 CurrentState = 3
 
-[node name="Bloco64" parent="Node2D" unique_id=861963981 instance=ExtResource("2_xfk5q")]
+[node name="Bloco64" parent="Node2D" unique_id=1381778274 instance=ExtResource("2_xfk5q")]
 position = Vector2(24, 88)
 CurrentState = 2
 
-[node name="Bloco65" parent="Node2D" unique_id=1751603396 instance=ExtResource("2_xfk5q")]
+[node name="Bloco65" parent="Node2D" unique_id=672064448 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 88)
 CurrentState = 5
 
-[node name="Bloco82" parent="Node2D" unique_id=2112120150 instance=ExtResource("2_xfk5q")]
+[node name="Bloco82" parent="Node2D" unique_id=1262724661 instance=ExtResource("2_xfk5q")]
 position = Vector2(72, 96)
 CurrentState = 4
 
-[node name="Bloco88" parent="Node2D" unique_id=1189595695 instance=ExtResource("2_xfk5q")]
+[node name="Bloco88" parent="Node2D" unique_id=1336853035 instance=ExtResource("2_xfk5q")]
 position = Vector2(56, 96)
 
-[node name="Bloco89" parent="Node2D" unique_id=1021036958 instance=ExtResource("2_xfk5q")]
+[node name="Bloco89" parent="Node2D" unique_id=1760534502 instance=ExtResource("2_xfk5q")]
 position = Vector2(40, 96)
 CurrentState = 3
 
-[node name="Bloco90" parent="Node2D" unique_id=1235246547 instance=ExtResource("2_xfk5q")]
+[node name="Bloco90" parent="Node2D" unique_id=2136860878 instance=ExtResource("2_xfk5q")]
 position = Vector2(24, 96)
 CurrentState = 2
 
-[node name="Bloco91" parent="Node2D" unique_id=1077016262 instance=ExtResource("2_xfk5q")]
+[node name="Bloco91" parent="Node2D" unique_id=2071920025 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 96)
 CurrentState = 5
 
-[node name="Bloco120" parent="Node2D" unique_id=37978163 instance=ExtResource("2_xfk5q")]
+[node name="Bloco120" parent="Node2D" unique_id=1322150819 instance=ExtResource("2_xfk5q")]
 position = Vector2(88, 104)
 CurrentState = 5
 
-[node name="Bloco121" parent="Node2D" unique_id=1438911224 instance=ExtResource("2_xfk5q")]
+[node name="Bloco121" parent="Node2D" unique_id=908672563 instance=ExtResource("2_xfk5q")]
 position = Vector2(72, 104)
 CurrentState = 4
 
-[node name="Bloco127" parent="Node2D" unique_id=685836867 instance=ExtResource("2_xfk5q")]
+[node name="Bloco127" parent="Node2D" unique_id=646838680 instance=ExtResource("2_xfk5q")]
 position = Vector2(56, 104)
 
-[node name="Bloco128" parent="Node2D" unique_id=1236820947 instance=ExtResource("2_xfk5q")]
+[node name="Bloco128" parent="Node2D" unique_id=1027954602 instance=ExtResource("2_xfk5q")]
 position = Vector2(40, 104)
 CurrentState = 3
 
-[node name="Bloco129" parent="Node2D" unique_id=617979900 instance=ExtResource("2_xfk5q")]
+[node name="Bloco129" parent="Node2D" unique_id=1705598627 instance=ExtResource("2_xfk5q")]
 position = Vector2(24, 104)
 CurrentState = 2
 
-[node name="Bloco130" parent="Node2D" unique_id=1524303583 instance=ExtResource("2_xfk5q")]
+[node name="Bloco130" parent="Node2D" unique_id=549403686 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 104)
 CurrentState = 5
 
-[node name="Bloco145" parent="Node2D" unique_id=2109178202 instance=ExtResource("2_xfk5q")]
+[node name="Bloco145" parent="Node2D" unique_id=669398994 instance=ExtResource("2_xfk5q")]
 position = Vector2(104, 112)
 CurrentState = 2
 
-[node name="Bloco146" parent="Node2D" unique_id=1018390116 instance=ExtResource("2_xfk5q")]
+[node name="Bloco146" parent="Node2D" unique_id=892331647 instance=ExtResource("2_xfk5q")]
 position = Vector2(88, 112)
 CurrentState = 5
 
-[node name="Bloco147" parent="Node2D" unique_id=1919029677 instance=ExtResource("2_xfk5q")]
+[node name="Bloco147" parent="Node2D" unique_id=1452671942 instance=ExtResource("2_xfk5q")]
 position = Vector2(72, 112)
 CurrentState = 4
 
-[node name="Bloco153" parent="Node2D" unique_id=1129537322 instance=ExtResource("2_xfk5q")]
+[node name="Bloco153" parent="Node2D" unique_id=1678265300 instance=ExtResource("2_xfk5q")]
 position = Vector2(56, 112)
 
-[node name="Bloco154" parent="Node2D" unique_id=344200084 instance=ExtResource("2_xfk5q")]
+[node name="Bloco154" parent="Node2D" unique_id=1680219328 instance=ExtResource("2_xfk5q")]
 position = Vector2(40, 112)
 CurrentState = 3
 
-[node name="Bloco155" parent="Node2D" unique_id=395482466 instance=ExtResource("2_xfk5q")]
+[node name="Bloco155" parent="Node2D" unique_id=426319068 instance=ExtResource("2_xfk5q")]
 position = Vector2(24, 112)
 CurrentState = 2
 
-[node name="Bloco156" parent="Node2D" unique_id=1345297058 instance=ExtResource("2_xfk5q")]
+[node name="Bloco156" parent="Node2D" unique_id=330385252 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 112)
 CurrentState = 5
 
-[node name="Bloco170" parent="Node2D" unique_id=370102909 instance=ExtResource("2_xfk5q")]
+[node name="Bloco170" parent="Node2D" unique_id=774121650 instance=ExtResource("2_xfk5q")]
 position = Vector2(120, 120)
 CurrentState = 3
 
-[node name="Bloco171" parent="Node2D" unique_id=1215796771 instance=ExtResource("2_xfk5q")]
+[node name="Bloco171" parent="Node2D" unique_id=1877774361 instance=ExtResource("2_xfk5q")]
 position = Vector2(104, 120)
 CurrentState = 2
 
-[node name="Bloco172" parent="Node2D" unique_id=986984282 instance=ExtResource("2_xfk5q")]
+[node name="Bloco172" parent="Node2D" unique_id=568684481 instance=ExtResource("2_xfk5q")]
 position = Vector2(88, 120)
 CurrentState = 5
 
-[node name="Bloco173" parent="Node2D" unique_id=1355051780 instance=ExtResource("2_xfk5q")]
+[node name="Bloco173" parent="Node2D" unique_id=1909644291 instance=ExtResource("2_xfk5q")]
 position = Vector2(72, 120)
 CurrentState = 4
 
-[node name="Bloco179" parent="Node2D" unique_id=2099425762 instance=ExtResource("2_xfk5q")]
+[node name="Bloco179" parent="Node2D" unique_id=2077670707 instance=ExtResource("2_xfk5q")]
 position = Vector2(56, 120)
 
-[node name="Bloco180" parent="Node2D" unique_id=657195843 instance=ExtResource("2_xfk5q")]
+[node name="Bloco180" parent="Node2D" unique_id=1744190655 instance=ExtResource("2_xfk5q")]
 position = Vector2(40, 120)
 CurrentState = 3
 
-[node name="Bloco181" parent="Node2D" unique_id=230197975 instance=ExtResource("2_xfk5q")]
+[node name="Bloco181" parent="Node2D" unique_id=710516238 instance=ExtResource("2_xfk5q")]
 position = Vector2(24, 120)
 CurrentState = 2
 
-[node name="Bloco182" parent="Node2D" unique_id=1723815365 instance=ExtResource("2_xfk5q")]
+[node name="Bloco182" parent="Node2D" unique_id=742998624 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 120)
 CurrentState = 5
 
-[node name="Bloco183" parent="Node2D" unique_id=407424146 instance=ExtResource("2_xfk5q")]
+[node name="Bloco183" parent="Node2D" unique_id=7926009 instance=ExtResource("2_xfk5q")]
 position = Vector2(120, 128)
 CurrentState = 3
 
-[node name="Bloco184" parent="Node2D" unique_id=13745393 instance=ExtResource("2_xfk5q")]
+[node name="Bloco184" parent="Node2D" unique_id=252410536 instance=ExtResource("2_xfk5q")]
 position = Vector2(104, 128)
 CurrentState = 2
 
-[node name="Bloco185" parent="Node2D" unique_id=1166698550 instance=ExtResource("2_xfk5q")]
+[node name="Bloco185" parent="Node2D" unique_id=2073644708 instance=ExtResource("2_xfk5q")]
 position = Vector2(88, 128)
 CurrentState = 5
 
-[node name="Bloco186" parent="Node2D" unique_id=486784516 instance=ExtResource("2_xfk5q")]
+[node name="Bloco186" parent="Node2D" unique_id=1270890096 instance=ExtResource("2_xfk5q")]
 position = Vector2(72, 128)
 CurrentState = 4
 
-[node name="Bloco190" parent="Node2D" unique_id=1878879244 instance=ExtResource("2_xfk5q")]
+[node name="Bloco190" parent="Node2D" unique_id=1330166166 instance=ExtResource("2_xfk5q")]
 position = Vector2(136, 128)
 
-[node name="Bloco192" parent="Node2D" unique_id=1947488908 instance=ExtResource("2_xfk5q")]
+[node name="Bloco192" parent="Node2D" unique_id=1451934102 instance=ExtResource("2_xfk5q")]
 position = Vector2(56, 128)
 
-[node name="Bloco193" parent="Node2D" unique_id=1288087361 instance=ExtResource("2_xfk5q")]
+[node name="Bloco193" parent="Node2D" unique_id=1622308381 instance=ExtResource("2_xfk5q")]
 position = Vector2(40, 128)
 CurrentState = 3
 
-[node name="Bloco194" parent="Node2D" unique_id=1789409392 instance=ExtResource("2_xfk5q")]
+[node name="Bloco194" parent="Node2D" unique_id=1509523984 instance=ExtResource("2_xfk5q")]
 position = Vector2(24, 128)
 CurrentState = 2
 
-[node name="Bloco195" parent="Node2D" unique_id=594539846 instance=ExtResource("2_xfk5q")]
+[node name="Bloco195" parent="Node2D" unique_id=609301573 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 128)
 CurrentState = 5
 
-[node name="Bloco222" parent="Node2D" unique_id=876325208 instance=ExtResource("2_xfk5q")]
+[node name="Bloco222" parent="Node2D" unique_id=1702780287 instance=ExtResource("2_xfk5q")]
 position = Vector2(120, 136)
 CurrentState = 3
 
-[node name="Bloco223" parent="Node2D" unique_id=2074347351 instance=ExtResource("2_xfk5q")]
+[node name="Bloco223" parent="Node2D" unique_id=1814952947 instance=ExtResource("2_xfk5q")]
 position = Vector2(104, 136)
 CurrentState = 2
 
-[node name="Bloco224" parent="Node2D" unique_id=107926023 instance=ExtResource("2_xfk5q")]
+[node name="Bloco224" parent="Node2D" unique_id=826586823 instance=ExtResource("2_xfk5q")]
 position = Vector2(88, 136)
 CurrentState = 5
 
-[node name="Bloco225" parent="Node2D" unique_id=731965394 instance=ExtResource("2_xfk5q")]
+[node name="Bloco225" parent="Node2D" unique_id=1343717033 instance=ExtResource("2_xfk5q")]
 position = Vector2(72, 136)
 CurrentState = 4
 
-[node name="Bloco228" parent="Node2D" unique_id=1361736838 instance=ExtResource("2_xfk5q")]
+[node name="Bloco228" parent="Node2D" unique_id=1590703379 instance=ExtResource("2_xfk5q")]
 position = Vector2(152, 136)
 CurrentState = 4
 
-[node name="Bloco229" parent="Node2D" unique_id=567047316 instance=ExtResource("2_xfk5q")]
+[node name="Bloco229" parent="Node2D" unique_id=1866714667 instance=ExtResource("2_xfk5q")]
 position = Vector2(136, 136)
 
-[node name="Bloco231" parent="Node2D" unique_id=582268208 instance=ExtResource("2_xfk5q")]
+[node name="Bloco231" parent="Node2D" unique_id=1405650647 instance=ExtResource("2_xfk5q")]
 position = Vector2(56, 136)
 
-[node name="Bloco232" parent="Node2D" unique_id=1030732900 instance=ExtResource("2_xfk5q")]
+[node name="Bloco232" parent="Node2D" unique_id=1663922 instance=ExtResource("2_xfk5q")]
 position = Vector2(40, 136)
 CurrentState = 3
 
-[node name="Bloco233" parent="Node2D" unique_id=20279611 instance=ExtResource("2_xfk5q")]
+[node name="Bloco233" parent="Node2D" unique_id=1288098109 instance=ExtResource("2_xfk5q")]
 position = Vector2(24, 136)
 CurrentState = 2
 
-[node name="Bloco234" parent="Node2D" unique_id=865807619 instance=ExtResource("2_xfk5q")]
+[node name="Bloco234" parent="Node2D" unique_id=1720667477 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 136)
 CurrentState = 5
 
-[node name="Bloco248" parent="Node2D" unique_id=636875706 instance=ExtResource("2_xfk5q")]
+[node name="Bloco248" parent="Node2D" unique_id=1201065088 instance=ExtResource("2_xfk5q")]
 position = Vector2(120, 144)
 CurrentState = 3
 
-[node name="Bloco249" parent="Node2D" unique_id=1786199511 instance=ExtResource("2_xfk5q")]
+[node name="Bloco249" parent="Node2D" unique_id=643931669 instance=ExtResource("2_xfk5q")]
 position = Vector2(104, 144)
 CurrentState = 2
 
-[node name="Bloco250" parent="Node2D" unique_id=1001606132 instance=ExtResource("2_xfk5q")]
+[node name="Bloco250" parent="Node2D" unique_id=744292853 instance=ExtResource("2_xfk5q")]
 position = Vector2(88, 144)
 CurrentState = 5
 
-[node name="Bloco251" parent="Node2D" unique_id=1115016794 instance=ExtResource("2_xfk5q")]
+[node name="Bloco251" parent="Node2D" unique_id=405308743 instance=ExtResource("2_xfk5q")]
 position = Vector2(72, 144)
 CurrentState = 4
 
-[node name="Bloco253" parent="Node2D" unique_id=1831813688 instance=ExtResource("2_xfk5q")]
+[node name="Bloco253" parent="Node2D" unique_id=1188750133 instance=ExtResource("2_xfk5q")]
 position = Vector2(168, 144)
 CurrentState = 5
 
-[node name="Bloco254" parent="Node2D" unique_id=1201995809 instance=ExtResource("2_xfk5q")]
+[node name="Bloco254" parent="Node2D" unique_id=258505370 instance=ExtResource("2_xfk5q")]
 position = Vector2(152, 144)
 CurrentState = 4
 
-[node name="Bloco255" parent="Node2D" unique_id=404486335 instance=ExtResource("2_xfk5q")]
+[node name="Bloco255" parent="Node2D" unique_id=338277334 instance=ExtResource("2_xfk5q")]
 position = Vector2(136, 144)
 
-[node name="Bloco257" parent="Node2D" unique_id=1682989405 instance=ExtResource("2_xfk5q")]
+[node name="Bloco257" parent="Node2D" unique_id=1781125761 instance=ExtResource("2_xfk5q")]
 position = Vector2(56, 144)
 
-[node name="Bloco258" parent="Node2D" unique_id=75122138 instance=ExtResource("2_xfk5q")]
+[node name="Bloco258" parent="Node2D" unique_id=279878059 instance=ExtResource("2_xfk5q")]
 position = Vector2(40, 144)
 CurrentState = 3
 
-[node name="Bloco259" parent="Node2D" unique_id=1733670672 instance=ExtResource("2_xfk5q")]
+[node name="Bloco259" parent="Node2D" unique_id=1459255452 instance=ExtResource("2_xfk5q")]
 position = Vector2(24, 144)
 CurrentState = 2
 
-[node name="Bloco260" parent="Node2D" unique_id=1114179204 instance=ExtResource("2_xfk5q")]
+[node name="Bloco260" parent="Node2D" unique_id=203974472 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 144)
 CurrentState = 5
 
-[node name="Bloco274" parent="Node2D" unique_id=1405156246 instance=ExtResource("2_xfk5q")]
+[node name="Bloco274" parent="Node2D" unique_id=601364068 instance=ExtResource("2_xfk5q")]
 position = Vector2(120, 152)
 CurrentState = 3
 
-[node name="Bloco275" parent="Node2D" unique_id=338246519 instance=ExtResource("2_xfk5q")]
+[node name="Bloco275" parent="Node2D" unique_id=1127661425 instance=ExtResource("2_xfk5q")]
 position = Vector2(104, 152)
 CurrentState = 2
 
-[node name="Bloco276" parent="Node2D" unique_id=1111720548 instance=ExtResource("2_xfk5q")]
+[node name="Bloco276" parent="Node2D" unique_id=1777148474 instance=ExtResource("2_xfk5q")]
 position = Vector2(88, 152)
 CurrentState = 5
 
-[node name="Bloco277" parent="Node2D" unique_id=2112139181 instance=ExtResource("2_xfk5q")]
+[node name="Bloco277" parent="Node2D" unique_id=194184174 instance=ExtResource("2_xfk5q")]
 position = Vector2(72, 152)
 CurrentState = 4
 
-[node name="Bloco278" parent="Node2D" unique_id=1636268133 instance=ExtResource("2_xfk5q")]
+[node name="Bloco278" parent="Node2D" unique_id=713547080 instance=ExtResource("2_xfk5q")]
 position = Vector2(184, 152)
 CurrentState = 2
 
-[node name="Bloco279" parent="Node2D" unique_id=1269189526 instance=ExtResource("2_xfk5q")]
+[node name="Bloco279" parent="Node2D" unique_id=1922726836 instance=ExtResource("2_xfk5q")]
 position = Vector2(168, 152)
 CurrentState = 5
 
-[node name="Bloco280" parent="Node2D" unique_id=68021902 instance=ExtResource("2_xfk5q")]
+[node name="Bloco280" parent="Node2D" unique_id=1203148277 instance=ExtResource("2_xfk5q")]
 position = Vector2(152, 152)
 CurrentState = 4
 
-[node name="Bloco281" parent="Node2D" unique_id=340930883 instance=ExtResource("2_xfk5q")]
+[node name="Bloco281" parent="Node2D" unique_id=718021036 instance=ExtResource("2_xfk5q")]
 position = Vector2(136, 152)
 
-[node name="Bloco283" parent="Node2D" unique_id=97691586 instance=ExtResource("2_xfk5q")]
+[node name="Bloco283" parent="Node2D" unique_id=351608815 instance=ExtResource("2_xfk5q")]
 position = Vector2(56, 152)
 
-[node name="Bloco284" parent="Node2D" unique_id=1057146266 instance=ExtResource("2_xfk5q")]
+[node name="Bloco284" parent="Node2D" unique_id=1741968440 instance=ExtResource("2_xfk5q")]
 position = Vector2(40, 152)
 CurrentState = 3
 
-[node name="Bloco285" parent="Node2D" unique_id=699338414 instance=ExtResource("2_xfk5q")]
+[node name="Bloco285" parent="Node2D" unique_id=1827011957 instance=ExtResource("2_xfk5q")]
 position = Vector2(24, 152)
 CurrentState = 2
 
-[node name="Bloco286" parent="Node2D" unique_id=811251257 instance=ExtResource("2_xfk5q")]
+[node name="Bloco286" parent="Node2D" unique_id=1853599747 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 152)
 CurrentState = 5
 
-[node name="Bloco295" parent="Node2D" unique_id=1471595713 instance=ExtResource("2_xfk5q")]
+[node name="Bloco295" parent="Node2D" unique_id=1093781275 instance=ExtResource("2_xfk5q")]
 position = Vector2(200, 160)
 CurrentState = 3
 
-[node name="Bloco300" parent="Node2D" unique_id=1406584997 instance=ExtResource("2_xfk5q")]
+[node name="Bloco300" parent="Node2D" unique_id=1185331706 instance=ExtResource("2_xfk5q")]
 position = Vector2(120, 160)
 CurrentState = 7
 CurrentHealth = 2
 
-[node name="Bloco301" parent="Node2D" unique_id=656443620 instance=ExtResource("2_xfk5q")]
+[node name="Bloco301" parent="Node2D" unique_id=1751219378 instance=ExtResource("2_xfk5q")]
 position = Vector2(104, 160)
 CurrentState = 7
 CurrentHealth = 2
 
-[node name="Bloco302" parent="Node2D" unique_id=1599427096 instance=ExtResource("2_xfk5q")]
+[node name="Bloco302" parent="Node2D" unique_id=1418511622 instance=ExtResource("2_xfk5q")]
 position = Vector2(88, 160)
 CurrentState = 7
 CurrentHealth = 2
 
-[node name="Bloco303" parent="Node2D" unique_id=630336686 instance=ExtResource("2_xfk5q")]
+[node name="Bloco303" parent="Node2D" unique_id=834526569 instance=ExtResource("2_xfk5q")]
 position = Vector2(72, 160)
 CurrentState = 7
 CurrentHealth = 2
 
-[node name="Bloco304" parent="Node2D" unique_id=1041534986 instance=ExtResource("2_xfk5q")]
+[node name="Bloco304" parent="Node2D" unique_id=1913680842 instance=ExtResource("2_xfk5q")]
 position = Vector2(184, 160)
 CurrentState = 7
 CurrentHealth = 2
 
-[node name="Bloco305" parent="Node2D" unique_id=920612154 instance=ExtResource("2_xfk5q")]
+[node name="Bloco305" parent="Node2D" unique_id=541766175 instance=ExtResource("2_xfk5q")]
 position = Vector2(168, 160)
 CurrentState = 7
 CurrentHealth = 2
 
-[node name="Bloco306" parent="Node2D" unique_id=401668505 instance=ExtResource("2_xfk5q")]
+[node name="Bloco306" parent="Node2D" unique_id=880034636 instance=ExtResource("2_xfk5q")]
 position = Vector2(152, 160)
 CurrentState = 7
 CurrentHealth = 2
 
-[node name="Bloco307" parent="Node2D" unique_id=981931471 instance=ExtResource("2_xfk5q")]
+[node name="Bloco307" parent="Node2D" unique_id=1173353347 instance=ExtResource("2_xfk5q")]
 position = Vector2(136, 160)
 CurrentState = 7
 CurrentHealth = 2
 
-[node name="Bloco308" parent="Node2D" unique_id=1661149967 instance=ExtResource("2_xfk5q")]
-position = Vector2(200, 160)
-CurrentState = 3
-
-[node name="Bloco309" parent="Node2D" unique_id=196614150 instance=ExtResource("2_xfk5q")]
+[node name="Bloco309" parent="Node2D" unique_id=1971383300 instance=ExtResource("2_xfk5q")]
 position = Vector2(56, 160)
 CurrentState = 7
 CurrentHealth = 2
 
-[node name="Bloco310" parent="Node2D" unique_id=959878410 instance=ExtResource("2_xfk5q")]
+[node name="Bloco310" parent="Node2D" unique_id=602895260 instance=ExtResource("2_xfk5q")]
 position = Vector2(40, 160)
 CurrentState = 7
 CurrentHealth = 2
 
-[node name="Bloco311" parent="Node2D" unique_id=857387120 instance=ExtResource("2_xfk5q")]
+[node name="Bloco311" parent="Node2D" unique_id=1150256396 instance=ExtResource("2_xfk5q")]
 position = Vector2(24, 160)
 CurrentState = 7
 CurrentHealth = 2
 
-[node name="Bloco312" parent="Node2D" unique_id=1778958508 instance=ExtResource("2_xfk5q")]
+[node name="Bloco312" parent="Node2D" unique_id=1481522755 instance=ExtResource("2_xfk5q")]
 position = Vector2(8, 160)
 CurrentState = 7
 CurrentHealth = 2

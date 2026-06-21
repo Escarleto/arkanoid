@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c0ma3kvkb5c1"]
 
 [ext_resource type="Script" uid="uid://dgup7mcv7stxq" path="res://scripts/Menu.cs" id="1_pxkw3"]
+[ext_resource type="Texture2D" uid="uid://wsp2nqrs0cyp" path="res://Assets/Logo.png" id="2_bhq4f"]
 [ext_resource type="Texture2D" uid="uid://p81ueh6i118" path="res://Assets/Arcade - Arkanoid - Miscellaneous - Blocks & Backgrounds.png" id="2_rgq4t"]
 [ext_resource type="FontFile" uid="uid://bjxgevtmt0soj" path="res://Fonts/webpixel bitmap_bold.otf" id="3_1mfia"]
 
@@ -37,18 +38,20 @@ offset_bottom = 256.0
 color = Color(0, 0, 0, 1)
 
 [node name="Title" type="TextureRect" parent="." unique_id=766690069]
-texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = -80.0
-offset_right = 88.0
+offset_left = -94.77345
+offset_top = -68.0
+offset_right = 94.77345
+offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_bhq4f")
+expand_mode = 1
 
 [node name="StartButton" type="TextureButton" parent="." unique_id=443254008]
 texture_filter = 1

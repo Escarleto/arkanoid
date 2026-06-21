@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Dynamic;
 
 public partial class MainGame : Node2D
 {
@@ -13,7 +14,17 @@ public partial class MainGame : Node2D
     [Export] public PackedScene[] levels;
 
     private int CurrentLevelBlocks = 0;
-    private int CurrentLevel = 1;
+    public int CurrentLevel {get; private set;} = 1;
+    private int currentScore = 0;
+    public int CurrentScore
+    {
+        get => currentScore;
+        set
+        {
+            currentScore = value;
+            hud.UpdateScore(value);
+        }
+    }
     private Node _currentLevelInstance;
 
     [Signal] public delegate void StartLevelEventHandler();
@@ -21,8 +32,6 @@ public partial class MainGame : Node2D
     public override void _Ready()
     {
         Instance = this;
-        Label lifeValue = hud.life;
-        Label scoreValue = hud.score;
         
         if (!DebugMode)
             GetTree().Paused = true;

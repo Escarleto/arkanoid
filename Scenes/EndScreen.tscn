@@ -2,10 +2,18 @@
 
 [ext_resource type="Script" uid="uid://dgup7mcv7stxq" path="res://scripts/Menu.cs" id="1_jrx8a"]
 [ext_resource type="Texture2D" uid="uid://p81ueh6i118" path="res://Assets/Arcade - Arkanoid - Miscellaneous - Blocks & Backgrounds.png" id="2_3gukv"]
+[ext_resource type="FontFile" uid="uid://euffhavfmm75" path="res://Fonts/webpixel bitmap_black.otf" id="2_jh5rx"]
+[ext_resource type="FontFile" uid="uid://ft5dwq6uta2a" path="res://Fonts/webpixel bitmap_medium.otf" id="3_d234m"]
 [ext_resource type="FontFile" uid="uid://bjxgevtmt0soj" path="res://Fonts/webpixel bitmap_bold.otf" id="3_jh5rx"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_ep440"]
-font = ExtResource("3_jh5rx")
+[sub_resource type="LabelSettings" id="LabelSettings_jrx8a"]
+font = ExtResource("2_jh5rx")
+font_size = 27
+font_color = Color(1, 0.70503664, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3gukv"]
+font = ExtResource("3_d234m")
+font_size = 14
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ep440"]
 atlas = ExtResource("2_3gukv")
@@ -18,6 +26,9 @@ region = Rect2(32, 184, 15, 8)
 [sub_resource type="AtlasTexture" id="AtlasTexture_bhq4f"]
 atlas = ExtResource("2_3gukv")
 region = Rect2(0, 184, 16, 8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ep440"]
+font = ExtResource("3_jh5rx")
 
 [node name="StartingMenu" type="Control" unique_id=180510989]
 process_mode = 3
@@ -37,20 +48,40 @@ offset_bottom = 256.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="." unique_id=1364556807]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -24.0
-offset_top = 30.0
-offset_right = 24.0
-offset_bottom = 46.0
+offset_left = -94.5
+offset_top = -72.0
+offset_right = 94.5
+offset_bottom = -44.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "REPLAY"
-label_settings = SubResource("LabelSettings_ep440")
+text = "CONGRATULATIONS!!!"
+label_settings = SubResource("LabelSettings_jrx8a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Label" unique_id=1775057312]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = 24.0
+offset_right = 72.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU BEAT ALL LEVELS"
+label_settings = SubResource("LabelSettings_3gukv")
 horizontal_alignment = 1
 vertical_alignment = 1
 
