@@ -13,10 +13,7 @@ public partial class Jogador : CharacterBody2D
 			CurrentHealth = value;
 			EmitSignal("LifeChanged", value);
 			if (value <= 0)
-			{
 				MainGame.Instance.GameOver();
-				Health = 2;
-			}
 		}
 	}
 	private float H_Direction = 0;
@@ -37,12 +34,19 @@ public partial class Jogador : CharacterBody2D
 		H_Direction = Mathf.MoveToward(H_Direction, Input.GetAxis("ui_left", "ui_right"), SpeedFallofRate * (float)delta);
 
 		Velocity = new Vector2(H_Direction * Speed, 0f);
+
 		MoveAndSlide();
 	}
 
 	private void Respawn() // volta ao ponto inicial quando da restart 
 	{
 		Position = SpawnPos;
+	}
+
+	private void OnGameRestart() // reseta o player para começar um novo jogo
+	{
+		Respawn();
+		Health = 2;
 	}
 
 	private void OnLosingBall(Node2D Bola)

@@ -28,6 +28,7 @@ public partial class MainGame : Node2D
     private Node _currentLevelInstance;
 
     [Signal] public delegate void StartLevelEventHandler();
+    [Signal] public delegate void OnGameRestartedEventHandler();
 
     public override void _Ready()
     {
@@ -68,7 +69,7 @@ public partial class MainGame : Node2D
             {
                 timer.Start();
                 GetTree().Root.AddChild(CurrentTransition);
-            }  
+            }
         }
 
         timer.Timeout += () =>
@@ -76,7 +77,7 @@ public partial class MainGame : Node2D
             timer.QueueFree();
             CurrentTransition.QueueFree();
             StartGame();
-        };
+        };    
     }
 
     private void ChangeLevel(int Index) // Da trigger a mudança de lvl
@@ -97,7 +98,7 @@ public partial class MainGame : Node2D
 
     public void Respawn(Node2D Body) // Da trigger quando a bola sai do jogo 
     {
-        if (Body is Bola) 
+        if (Body is Bola && (CurrentLevel > 0 || CurrentLevel < 4)) 
             StartGame();
     }
 
@@ -108,5 +109,7 @@ public partial class MainGame : Node2D
         ChangeLevel(0);
         GetTree().Paused = true;
     }
+
+    public void Reset() => EmitSignal("OnGameRestarted");
     #endregion
 }

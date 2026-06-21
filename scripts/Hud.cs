@@ -9,12 +9,10 @@ public partial class Hud : Node2D
     
     private void UpdateLifes(int NewLife) // atualiza o text de Life
     {   
-        string NewLifeText = NewLife < 10 ? "0" + NewLife.ToString() : 
-                             NewLife.ToString();
-        life.Text = NewLifeText;
+        life.Text = NewLife.ToString().PadLeft(2, '0');;
     }
 
-    public void UpdateScore(int NewScore)
+    public void UpdateScore(int NewScore) // atualiza o text de Score
     {
         scoreTxt.Text = NewScore.ToString().PadLeft(5, '0');
     }
