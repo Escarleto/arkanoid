@@ -12,7 +12,11 @@ public partial class Jogador : CharacterBody2D
 		{
 			CurrentHealth = value;
 			EmitSignal("LifeChanged", value);
-			if (value <= 0) MainGame.Instance.GameOver();
+			if (value <= 0)
+			{
+				MainGame.Instance.GameOver();
+				Health = 2;
+			}
 		}
 	}
 	private float H_Direction = 0;
