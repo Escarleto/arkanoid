@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3q11wl36knh7"
+path="res://.godot/imported/Amstrad CPC - Arkanoid - Main Theme.mp3-940fc692560531ce88ecead41b411c5e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Amstrad CPC - Arkanoid - Main Theme.mp3"
+dest_files=["res://.godot/imported/Amstrad CPC - Arkanoid - Main Theme.mp3-940fc692560531ce88ecead41b411c5e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
