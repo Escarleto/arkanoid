@@ -11,7 +11,7 @@ public abstract partial class PowerUp : Area2D
     [Export] private float FallSpeed = 60f;     
     protected Jogador Player;
 
-    // --- lifecycle ---------------------------------------------------------
+    
 
     public override void _Ready()
     {
@@ -25,9 +25,9 @@ public abstract partial class PowerUp : Area2D
         if (GlobalPosition.Y > 250) QueueFree();
     }
 
-    // --- drop logic (owned by the base script) -----------------------------
+    
 
-    private const float DropChance = 0.3f;      // 30% of destroyed blocks drop
+    private const float DropChance = 0.3f;      // Apenas 30% dos blocos dao drop a powers
 
     private static readonly (PowerUps powerUp, float weight)[] _weightedDrops =
     {
@@ -54,12 +54,12 @@ public abstract partial class PowerUp : Area2D
     
     public static void TrySpawn(Node parent, Vector2 position)
     {
-        if (GD.Randf() > DropChance) return;            // no drop
+        if (GD.Randf() > DropChance) return;            // pode nao dar powers
         Spawn(GetRandomWeightedPowerUp(), parent, position);
     }
 
     
-    public static void Spawn(PowerUps type, Node parent, Vector2 position)
+    public static void Spawn(PowerUps type, Node parent, Vector2 position)// da spawn ao power com a localizaçao do bloco que partiu 
     {
         var scene = GD.Load<PackedScene>(_scenePaths[type]);
         var instance = scene.Instantiate<PowerUp>();
@@ -68,7 +68,7 @@ public abstract partial class PowerUp : Area2D
         instance.Type = type;
     }
 
-    public static PowerUps GetRandomWeightedPowerUp()
+    public static PowerUps GetRandomWeightedPowerUp() // Calcula os pesos dos powers 
     {
         float totalWeight = 0f;
         foreach (var (_, weight) in _weightedDrops)
@@ -87,9 +87,9 @@ public abstract partial class PowerUp : Area2D
         return _weightedDrops[0].powerUp;
     }
 
-    // --- collection --------------------------------------------------------
+    
 
-    private void GetPlayer(Node2D Body)
+    private void GetPlayer(Node2D Body)// se encontrar o jogador, faz o efeito e apaga no power
     {
         if (Body is Jogador jogador)
         {
@@ -99,5 +99,5 @@ public abstract partial class PowerUp : Area2D
         }
     }
 
-    protected abstract void Effect();
+    protected abstract void Effect(); // Base para todos os efeitos 
 }

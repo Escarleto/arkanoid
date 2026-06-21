@@ -19,17 +19,17 @@ public partial class Bola : CharacterBody2D
         Vector2 Movement = Vector2.Right.Rotated(Rotation) * Speed * (float)delta;
         KinematicCollision2D Collision = MoveAndCollide(Movement);
 
-        if (Collision == null) return;
+        if (Collision == null) return; // Ve se tem colisao senao nao avança 
 
-        if (Collision.GetCollider() is Jogador)
+        if (Collision.GetCollider() is Jogador) // se a bola bateu no jogador, muda a direçao para onde se esta a dirigir
         {
             Node2D Jog = Collision.GetCollider() as Node2D;
             Rotation = Jog.GlobalPosition.DirectionTo(GlobalPosition).Angle();
         }  
         else
         {
-            Rotation = Vector2.FromAngle(Rotation).Bounce(Collision.GetNormal()).Angle();   
-            if (Collision.GetCollider() is Bloco)
+            Rotation = Vector2.FromAngle(Rotation).Bounce(Collision.GetNormal()).Angle();    // se for uma parede, calcula o novo angulo
+            if (Collision.GetCollider() is Bloco)// se bater num bloco, tira vida ao bloco
             {
                 Bloco BlocoAcertado = Collision.GetCollider() as Bloco;
                 BlocoAcertado.Health--;
@@ -38,7 +38,7 @@ public partial class Bola : CharacterBody2D
         }
     }
 
-    private void Respawn()
+    private void Respawn() // Quando a bola da respawn, vai para o ponto inicial e dirigi se para baixo num angulo aleatorio
     {
         Position = SpawnPos;
         RotationDegrees = (float)GD.RandRange(30f, 120f);

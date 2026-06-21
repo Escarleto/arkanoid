@@ -30,7 +30,7 @@ public partial class MainGame : Node2D
     #endregion
 
     #region Level managing
-    public int LevelBlocks
+    public int LevelBlocks // Conta quantos blocos tem na fase
     {
         get => CurrentLevelBlocks;
         set
@@ -45,7 +45,7 @@ public partial class MainGame : Node2D
         }
     }
 
-    public void GoNext(int levelIndex)
+    public void GoNext(int levelIndex) // Vai para o proximo lvl 
     {
         var timer = new Timer { WaitTime = 3.0, OneShot = true };
         GetTree().Paused = true;
@@ -70,7 +70,7 @@ public partial class MainGame : Node2D
         };
     }
 
-    private void ChangeLevel(int Index)
+    private void ChangeLevel(int Index) // Da trigger a mudança de lvl
     {
         _currentLevelInstance?.QueueFree();
         CurrentLevel = Index;
@@ -79,22 +79,22 @@ public partial class MainGame : Node2D
         GetTree().Root.AddChild(_currentLevelInstance);
     }
 
-    private void StartGame()
+    private void StartGame() // Começa o jogo - para a primeira scene do jogo
     {
         EmitSignal("StartLevel");
         GetTree().Paused = true;
         StartTime.Start();
     }
 
-    public void Respawn(Node2D Body)
+    public void Respawn(Node2D Body) // Da trigger quando a bola sai do jogo 
     {
         if (Body is Bola) 
             StartGame();
     }
 
-    public void OnStartTimeout() => GetTree().Paused = false;
+    public void OnStartTimeout() => GetTree().Paused = false; // Cria uma pausa quando da respawn 
 
-    public void GameOver()
+    public void GameOver() // Caso perca o jogo, vai para o nivel 0 
     {
         ChangeLevel(0);
         GetTree().Paused = true;

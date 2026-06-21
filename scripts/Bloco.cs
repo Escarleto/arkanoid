@@ -1,16 +1,16 @@
 using Godot;
 using System;
 using System.Diagnostics;
-// Assuming you have an AtlasTexture assigned to a Sprite2D
-public enum ColorAtlas { White, Orange, Blue, Green, Red, Pink, Yellow, Iron, Gold } 
+
+public enum ColorAtlas { White, Orange, Blue, Green, Red, Pink, Yellow, Iron, Gold } // Todos as texturas de blocos que temos 
 public partial class Bloco : StaticBody2D
 {
-    [Export] public Texture2D[] StateTextures; // indexed to match enum order
+    [Export] public Texture2D[] StateTextures; 
     private TextureRect _textureRect;
     [Export] public ColorAtlas CurrentState = ColorAtlas.White;
     [Export] private int CurrentHealth = 1;
     
-    public int Health
+    public int Health // Vida do bloco - tbm apaga o bloco caso a vida for 0 
     {
         get => CurrentHealth;
         set
@@ -33,7 +33,7 @@ public partial class Bloco : StaticBody2D
         ApplyState();
     }
 
-    private void ApplyState()
+    private void ApplyState() // Aplica a textura
     {
         _textureRect.Texture = StateTextures[(int)CurrentState];
 

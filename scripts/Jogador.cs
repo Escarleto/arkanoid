@@ -5,7 +5,7 @@ public partial class Jogador : CharacterBody2D
 {
 	private int CurrentHealth = 2;
 	[Signal] public delegate int LifeChangedEventHandler(int NewHealth);
-	public int Health
+	public int Health // vida atual do jogador - se for 0 manda oara game over 
 	{
 		get => CurrentHealth;
 		set
@@ -36,7 +36,7 @@ public partial class Jogador : CharacterBody2D
 		MoveAndSlide();
 	}
 
-	private void Respawn()
+	private void Respawn() // volta ao ponto inicial quando da restart 
 	{
 		Position = SpawnPos;
 	}
