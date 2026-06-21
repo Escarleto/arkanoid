@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Arkanoid"
-run/main_scene="uid://bvscr1vfpdsej"
+run/main_scene="uid://c0ma3kvkb5c1"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<Updatedupstreamrun/main_scene="uid://bpiar38hmbp22"

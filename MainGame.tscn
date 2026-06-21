@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bti0lka3ijorp" path="res://scripts/MainGame.cs" id="1_bqqt8"]
 [ext_resource type="PackedScene" uid="uid://bvscr1vfpdsej" path="res://Scenes/level_1.tscn" id="2_8dnxm"]
+[ext_resource type="PackedScene" uid="uid://c0nvavnvjlx3d" path="res://Scenes/LevelTransition.tscn" id="2_v3hs3"]
 [ext_resource type="PackedScene" uid="uid://bpiar38hmbp22" path="res://Scenes/HUD.tscn" id="2_ws5ob"]
-[ext_resource type="PackedScene" uid="uid://bpm23fd1o1nag" path="res://Scenes/level_2.tscn" id="3_v3hs3"]
+[ext_resource type="PackedScene" uid="uid://bvscr1vfpdsej" path="res://Scenes/level_2.tscn" id="3_v3hs3"]
 [ext_resource type="PackedScene" uid="uid://bnvqlviprpf7u" path="res://Scenes/Bola.tscn" id="4_8qpgq"]
 [ext_resource type="PackedScene" uid="uid://i0imvylwmlcy" path="res://Scenes/Jogador.tscn" id="4_bqqt8"]
 [ext_resource type="PackedScene" uid="uid://cnc6belq2qyxm" path="res://Scenes/level_3.tscn" id="4_x5ji8"]
@@ -11,14 +12,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqqt8"]
 size = Vector2(224, 16)
 
-[node name="MainGame" type="Node2D" unique_id=1778983138 node_paths=PackedStringArray("hud", "RestartTime")]
+[node name="MainGame" type="Node2D" unique_id=1778983138 node_paths=PackedStringArray("hud", "StartTime")]
 process_mode = 3
 script = ExtResource("1_bqqt8")
 hud = NodePath("HUD")
-RestartTime = NodePath("Restart")
+StartTime = NodePath("Start")
+Transition = ExtResource("2_v3hs3")
 levels = Array[PackedScene]([ExtResource("2_8dnxm"), ExtResource("3_v3hs3"), ExtResource("4_x5ji8")])
 
-[node name="Restart" type="Timer" parent="." unique_id=2002351921]
+[node name="Start" type="Timer" parent="." unique_id=2002351921]
 wait_time = 2.0
 
 [node name="Boundries" type="StaticBody2D" parent="." unique_id=1075662199]
@@ -26,7 +28,7 @@ process_mode = 1
 position = Vector2(112, 128)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundries" unique_id=1004207924]
-polygon = PackedVector2Array(-112, -96, -112, 144, -104, 144, -104, -88, 104, -88, 104, 144, 112, 144, 112, -96)
+polygon = PackedVector2Array(-112, -96, -112, 144, -103, 144, -103, -88, 104, -88, 104, 144, 112, 144, 112, -96)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1681976700]
 process_mode = 1
@@ -50,8 +52,8 @@ position = Vector2(112, 288)
 position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_bqqt8")
 
-[connection signal="RestartLevel" from="." to="Jogador" method="Respawn"]
-[connection signal="RestartLevel" from="." to="Bola" method="Respawn"]
-[connection signal="timeout" from="Restart" to="." method="OnRestartTimeout"]
+[connection signal="StartLevel" from="." to="Jogador" method="Respawn"]
+[connection signal="StartLevel" from="." to="Bola" method="Respawn"]
+[connection signal="timeout" from="Start" to="." method="OnStartTimeout"]
 [connection signal="LifeChanged" from="Jogador" to="HUD" method="UpdateLifes"]
 [connection signal="body_entered" from="DeathArea" to="." method="Restart"]

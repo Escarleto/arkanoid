@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://c0nvavnvjlx3d"]
+
+[ext_resource type="FontFile" uid="uid://ft5dwq6uta2a" path="res://Fonts/webpixel bitmap_medium.otf" id="1_v7vtg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gtlfw"]
+font = ExtResource("1_v7vtg")
+
+[node name="LevelTransition" type="Control" unique_id=1986613000]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1272470197]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -96.0
+offset_right = 112.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=521685034]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -8.0
+offset_right = 61.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Loading next level..."
+label_settings = SubResource("LabelSettings_gtlfw")
+horizontal_alignment = 1
+vertical_alignment = 1

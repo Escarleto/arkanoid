@@ -30,7 +30,8 @@ color = Color(0, 0, 0, 1)
 
 [node name="ArcadeArkanoidBackgroundsFields" type="Sprite2D" parent="." unique_id=1910102623]
 texture_filter = 1
-position = Vector2(112, 152)
+position = Vector2(112.5, 152)
+scale = Vector2(0.99557525, 1)
 texture = SubResource("AtlasTexture_ciykk")
 
 [node name="Header - HighScore" type="Label" parent="." unique_id=1601056147]

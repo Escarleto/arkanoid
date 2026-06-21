@@ -3,9 +3,33 @@ using System;
 
 public partial class MainGame : Node2D
 {
+    #region Setup
     public static MainGame Instance { get; private set; }
+    
+    [Export] public Hud hud;
+    [Export] private Timer StartTime;
+    [Export] public PackedScene Transition;
+    [Export] public bool DebugMode = false;
+    [Export] public PackedScene[] levels;
+
     private int CurrentLevelBlocks = 0;
     private int CurrentLevel = 0;
+    private Node _currentLevelInstance;
+
+    [Signal] public delegate void StartLevelEventHandler();
+
+    public override void _Ready()
+    {
+        Instance = this;
+        Label lifeValue = hud.life;
+        Label scoreValue = hud.score;
+        
+        if (!DebugMode)
+            GetTree().Paused = true;
+    }
+    #endregion
+
+    #region Level managing
     public int LevelBlocks
     {
         get => CurrentLevelBlocks;
@@ -20,47 +44,49 @@ public partial class MainGame : Node2D
         }
     }
 
-    [Export] public Hud hud;
-    [Export] private Timer RestartTime;
-
-    public override void _Ready()
+    public void GoNext(int levelIndex)
     {
-        Instance = this;
-        Label lifeValue = hud.life;
-        Label scoreValue = hud.score;
-    }
+        var timer = new Timer { WaitTime = 3.0, OneShot = true };
 
-    [Export] public PackedScene[] levels;
-    private Node _currentLevelInstance;
-    private void GoNext(int levelIndex)
-    {
-        _currentLevelInstance?.QueueFree();
-        CurrentLevel = levelIndex;
-        
-        if (CurrentLevel >= levels.Length)
+        if (levelIndex < levels.Length && levelIndex >= 0)
         {
-            GD.Print("All levels complete!");
-            return;
+            _currentLevelInstance?.QueueFree();
+            CurrentLevel = levelIndex;
+            GD.Print(CurrentLevel);
+            _currentLevelInstance = levels[CurrentLevel].Instantiate();
+            GetTree().Root.AddChild(_currentLevelInstance);
+
+            AddChild(timer);
+            timer.Start();
         }
-        _currentLevelInstance = levels[CurrentLevel].Instantiate();
-        GetTree().Root.AddChild(_currentLevelInstance);
+
+        Node CurrentTransition = Transition.Instantiate();
+        GetTree().Root.AddChild(CurrentTransition);
+
+        GetTree().Paused = true;
+        timer.Timeout += () =>
+        {
+            timer.QueueFree();
+            CurrentTransition.QueueFree();
+            StartTime.Start();
+        };
     }
 
-    [Signal] public delegate void RestartLevelEventHandler();
     public void Restart(Node2D Body)
     {
         if (Body is Bola)
         {
-            EmitSignal("RestartLevel");
+            EmitSignal("StartLevel");
             GetTree().Paused = true;
-            RestartTime.Start();
+            StartTime.Start();
         }
     }
 
-    public void OnRestartTimeout() => GetTree().Paused = false;
+    public void OnStartTimeout() => GetTree().Paused = false;
 
     public void GameOver()
     {
         GD.Print("Game ovi");
     }
+    #endregion
 }
