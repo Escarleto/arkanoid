@@ -35,7 +35,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ktc4i")
-SceneStart = 1
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=183242662]
 layout_mode = 0
@@ -96,7 +95,7 @@ offset_right = 24.5
 offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Restart"
+text = "RESTART"
 label_settings = SubResource("LabelSettings_ep440")
 horizontal_alignment = 1
 vertical_alignment = 1
