@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c0nvavnvjlx3d" path="res://Scenes/LevelTransition.tscn" id="2_v3hs3"]
 [ext_resource type="PackedScene" uid="uid://bpiar38hmbp22" path="res://Scenes/HUD.tscn" id="2_ws5ob"]
 [ext_resource type="PackedScene" uid="uid://bvscr1vfpdsej" path="res://Scenes/level_2.tscn" id="3_v3hs3"]
+[ext_resource type="PackedScene" uid="uid://dhqtbl2cihodg" path="res://Scenes/GameOver.tscn" id="3_x5ji8"]
 [ext_resource type="PackedScene" uid="uid://bnvqlviprpf7u" path="res://Scenes/Bola.tscn" id="4_8qpgq"]
 [ext_resource type="PackedScene" uid="uid://i0imvylwmlcy" path="res://Scenes/Jogador.tscn" id="4_bqqt8"]
 [ext_resource type="PackedScene" uid="uid://cnc6belq2qyxm" path="res://Scenes/level_3.tscn" id="4_x5ji8"]
@@ -18,10 +19,11 @@ script = ExtResource("1_bqqt8")
 hud = NodePath("HUD")
 StartTime = NodePath("Start")
 Transition = ExtResource("2_v3hs3")
-levels = Array[PackedScene]([ExtResource("2_8dnxm"), ExtResource("3_v3hs3"), ExtResource("4_x5ji8")])
+levels = Array[PackedScene]([ExtResource("3_x5ji8"), ExtResource("2_8dnxm"), ExtResource("3_v3hs3"), ExtResource("4_x5ji8")])
 
 [node name="Start" type="Timer" parent="." unique_id=2002351921]
 wait_time = 2.0
+one_shot = true
 
 [node name="Boundries" type="StaticBody2D" parent="." unique_id=1075662199]
 process_mode = 1
@@ -56,4 +58,5 @@ shape = SubResource("RectangleShape2D_bqqt8")
 [connection signal="StartLevel" from="." to="Bola" method="Respawn"]
 [connection signal="timeout" from="Start" to="." method="OnStartTimeout"]
 [connection signal="LifeChanged" from="Jogador" to="HUD" method="UpdateLifes"]
-[connection signal="body_entered" from="DeathArea" to="." method="Restart"]
+[connection signal="body_entered" from="DeathArea" to="." method="Respawn"]
+[connection signal="body_entered" from="DeathArea" to="Jogador" method="OnLosingBall"]

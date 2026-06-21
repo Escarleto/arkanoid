@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://dhqtbl2cihodg"]
+
+[ext_resource type="Script" uid="uid://dgup7mcv7stxq" path="res://scripts/Menu.cs" id="1_ktc4i"]
+[ext_resource type="Texture2D" uid="uid://p81ueh6i118" path="res://Assets/Arcade - Arkanoid - Miscellaneous - Blocks & Backgrounds.png" id="2_uib17"]
+[ext_resource type="FontFile" uid="uid://bjxgevtmt0soj" path="res://Fonts/webpixel bitmap_bold.otf" id="3_rdiyk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ktc4i"]
+font = ExtResource("3_rdiyk")
+font_size = 25
+font_color = Color(1, 0, 0, 1)
+outline_size = 2
+outline_color = Color(1, 0.0755465, 0.38789922, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ep440"]
+atlas = ExtResource("2_uib17")
+region = Rect2(16, 184, 15, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mfia"]
+atlas = ExtResource("2_uib17")
+region = Rect2(32, 184, 15, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhq4f"]
+atlas = ExtResource("2_uib17")
+region = Rect2(0, 184, 16, 8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ep440"]
+font = ExtResource("3_rdiyk")
+
+[node name="Gameover" type="Control" unique_id=180510989]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ktc4i")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=183242662]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 224.0
+offset_bottom = 256.0
+color = Color(0, 0, 0, 1)
+
+[node name="GameOver txt" type="Label" parent="." unique_id=1717119431]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = -48.0
+offset_right = 82.5
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9984462, 1)
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_ktc4i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="RestartButton" type="TextureButton" parent="." unique_id=443254008]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = 32.0
+offset_right = 30.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_ep440")
+texture_pressed = SubResource("AtlasTexture_1mfia")
+texture_hover = SubResource("AtlasTexture_bhq4f")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="RestartButton" unique_id=308158672]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.5
+offset_top = -11.0
+offset_right = 24.5
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "RESTART"
+label_settings = SubResource("LabelSettings_ep440")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="RestartButton" to="." method="OnButtonPress"]

@@ -7,10 +7,6 @@
 atlas = ExtResource("2_x77am")
 region = Rect2(32, 8, 32, 8)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ep440"]
-radius = 4.0
-height = 32.0
-
 [sub_resource type="Animation" id="Animation_x77am"]
 resource_name = "Idle"
 length = 1.5666667
@@ -60,9 +56,9 @@ SpeedFallofRate = 2.5
 texture_filter = 1
 texture = SubResource("AtlasTexture_jd1co")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1154409523]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=195208598]
 rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_ep440")
+polygon = PackedVector2Array(1.0000007, -16, 4.0000005, -13, 3.9999995, 13, 0.9999993, 16, -1.0000007, 16, -4.0000005, 13, -3.9999995, -13, -0.9999993, -16)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1972665034]
 libraries/ = SubResource("AnimationLibrary_vk3iq")
