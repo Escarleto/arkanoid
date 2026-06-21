@@ -1,6 +1,23 @@
 [gd_scene format=3 uid="uid://c0ma3kvkb5c1"]
 
-[ext_resource type="Script" uid="uid://dgup7mcv7stxq" path="res://scripts/StartingMenu.cs" id="1_pxkw3"]
+[ext_resource type="Script" uid="uid://dgup7mcv7stxq" path="res://scripts/Menu.cs" id="1_pxkw3"]
+[ext_resource type="Texture2D" uid="uid://p81ueh6i118" path="res://Assets/Arcade - Arkanoid - Miscellaneous - Blocks & Backgrounds.png" id="2_rgq4t"]
+[ext_resource type="FontFile" uid="uid://bjxgevtmt0soj" path="res://Fonts/webpixel bitmap_bold.otf" id="3_1mfia"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ep440"]
+atlas = ExtResource("2_rgq4t")
+region = Rect2(16, 184, 15, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mfia"]
+atlas = ExtResource("2_rgq4t")
+region = Rect2(32, 184, 15, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhq4f"]
+atlas = ExtResource("2_rgq4t")
+region = Rect2(0, 184, 16, 8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ep440"]
+font = ExtResource("3_1mfia")
 
 [node name="StartingMenu" type="Control" unique_id=180510989]
 process_mode = 3
@@ -33,19 +50,41 @@ offset_right = 88.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="." unique_id=1539204283]
+[node name="StartButton" type="TextureButton" parent="." unique_id=443254008]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -40.0
+offset_left = -24.0
 offset_top = 32.0
-offset_right = 40.0
-offset_bottom = 63.0
+offset_right = 24.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_ep440")
+texture_pressed = SubResource("AtlasTexture_1mfia")
+texture_hover = SubResource("AtlasTexture_bhq4f")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="StartButton" unique_id=308158672]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -11.0
+offset_right = 24.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Start"
+label_settings = SubResource("LabelSettings_ep440")
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[connection signal="pressed" from="Button" to="." method="OnStart"]
+[connection signal="pressed" from="StartButton" to="." method="OnButtonPress"]

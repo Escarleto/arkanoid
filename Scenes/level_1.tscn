@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://2k2f4l63pf4k" path="res://Scenes/bloco.tscn" id="2_12fag"]
 
 [node name="Level1" type="Node2D" unique_id=903423352]
+script = ExtResource("1_8ffim")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1681996251]
 position = Vector2(0, -8)
-script = ExtResource("1_8ffim")
 
 [node name="Bloco14" parent="Node2D" unique_id=2019207006 instance=ExtResource("2_12fag")]
 position = Vector2(120, 72)

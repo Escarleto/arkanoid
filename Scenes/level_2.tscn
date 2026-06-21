@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bvscr1vfpdsej"]
 
+[ext_resource type="Script" uid="uid://8jwug387uuj3" path="res://Scenes/levelDebug.cs" id="1_smnlx"]
 [ext_resource type="PackedScene" uid="uid://2k2f4l63pf4k" path="res://Scenes/bloco.tscn" id="2_xfk5q"]
 
 [node name="Level2" type="Node2D" unique_id=903423352]
+script = ExtResource("1_smnlx")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1681996251]
 position = Vector2(0, -8)

@@ -16,6 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1272470197]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -44,7 +45,7 @@ offset_right = 61.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Loading next level..."
+text = "Loading level..."
 label_settings = SubResource("LabelSettings_gtlfw")
 horizontal_alignment = 1
 vertical_alignment = 1
