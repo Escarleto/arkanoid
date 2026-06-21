@@ -23,6 +23,7 @@ levels = Array[PackedScene]([ExtResource("3_x5ji8"), ExtResource("2_8dnxm"), Ext
 
 [node name="Start" type="Timer" parent="." unique_id=2002351921]
 wait_time = 2.0
+one_shot = true
 
 [node name="Boundries" type="StaticBody2D" parent="." unique_id=1075662199]
 process_mode = 1
@@ -58,3 +59,4 @@ shape = SubResource("RectangleShape2D_bqqt8")
 [connection signal="timeout" from="Start" to="." method="OnStartTimeout"]
 [connection signal="LifeChanged" from="Jogador" to="HUD" method="UpdateLifes"]
 [connection signal="body_entered" from="DeathArea" to="." method="Respawn"]
+[connection signal="body_entered" from="DeathArea" to="Jogador" method="OnLosingBall"]

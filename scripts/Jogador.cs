@@ -39,6 +39,10 @@ public partial class Jogador : CharacterBody2D
 	private void Respawn()
 	{
 		Position = SpawnPos;
-		Health--;
+	}
+
+	private void OnLosingBall(Node2D Bola)
+	{
+		if (Bola is Bola) Health--;
 	}
 }

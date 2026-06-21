@@ -50,11 +50,12 @@ public partial class MainGame : Node2D
         var timer = new Timer { WaitTime = 3.0, OneShot = true };
         GetTree().Paused = true;
 
-        if (levelIndex < levels.Length)
+        if (levelIndex < levels.Length && levelIndex > 0)
         {
             ChangeLevel(levelIndex);
             AddChild(timer);
-            timer.Start();
+            if (levelIndex < 3)
+                timer.Start();
         }
 
         Node CurrentTransition = Transition.Instantiate();
@@ -64,7 +65,6 @@ public partial class MainGame : Node2D
         {
             timer.QueueFree();
             CurrentTransition.QueueFree();
-            GetTree().Paused = false;
             StartGame();
         };
     }
